@@ -63,3 +63,16 @@
 .events-table-3-order .form-submit {margin-left:255px; width:235px; height:54px; text-transform:uppercase; border-radius:3px}
 
 .footer-payments {line-height:0; padding:2px 0 0 0; width:100%}
+
+.order-course-info-title {position:relative; padding:0 20px 0 0; line-height:21px; margin-top:-3px}
+.order-course-info-title:after {content:""; display:block; position:absolute; right:0; top:2px; bottom:-7px; width:1px; background:#e5e5e5}
+.order-course-info-title a {text-decoration:none}
+.order-course-info-title a:hover {text-decoration:underline}
+
+.order-course-info .common-form .param-sel {width:235px; border:1px solid #c0d4d0; font-size:14px}
+.order-course-info .common-form .param-open .param-sel {border-radius:4px 4px 0 0}
+.order-course-info .common-form .param-sel .sel-value {font-weight:bold}
+.order-course-info .common-form .param-selector .dropdown {font-size:14px; left:0; min-width:0; width:100%; margin-top:-1px; border-radius:0 0 4px 4px}
+.order-course-info .common-form .param-selector .dropdown div {padding:7px 10px 8px 10px}
+.order-course-info .common-form .param-selector .dropdown div:hover {background:#eff4f3; z-index:2; border-color:#eff4f3; position:relative}
+.order-course-info .common-form .param-selector .dropdown div:last-child:hover {border-radius:0 0 4px 4px}
