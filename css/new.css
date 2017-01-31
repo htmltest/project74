@@ -48,12 +48,13 @@
 .course-descr .events-payments {position:absolute; left:18px; bottom:25px; margin:0}
 
 .events-table-3-order {margin-bottom:60px; margin-left:0; margin-right:0}
-.events-table-3-order .name {width:100%}
-.events-table-3-order .price {white-space:nowrap}
+.events-table-3-order .name {width:100%; border-bottom:0; padding-bottom:0}
+.events-table-3-order .price {white-space:nowrap; vertical-align:middle; border-bottom:0; padding-bottom:0}
 .events-table-3-order .order-course-info {padding:23px 0 5px 0}
 .events-table-3-order .order-course-info-name {padding:0 25px 0 0}
 .events-table-3-order .order-course-info-option {float:left; width:235px; padding:0 0 0 105px; font-size:14px; line-height:21px; color:#000; font-weight:normal}
 .order-course-info-option-title {padding:0 0 10px 0}
+.events-table-3-order td.events-table-3-order-info {padding-top:0; border-top:none}
 
 .events-table-3-order .common-form label {font-size:14px; width:235px}
 .events-table-3-order .common-form .form-text {width:593px; margin:0; border:1px solid #c0d4d0; border-radius:0}
