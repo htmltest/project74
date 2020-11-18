@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>МФЦ - Заказ</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/reset-min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/fonts-min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" media="all"/>
+<!-- <link rel="stylesheet" type="text/css" href="css/ie7-8.css" media="screen"/> -->
+<!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="css/ie7-8.css" media="screen"/>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jcarousel.lite.custom.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/masked.input.js"></script>
+<!--script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script-->
+
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+<script type="text/javascript" src="js/jquery.nicefileinput.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>/*(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));*/</script>
+
+<!-- Wrapper -->
+<div class="top-wrap">
+  <div class="top-main">
+    <!-- Header -->
+    <div class='header'>
+
+        <div class='header-top fc'>
+            <div class='center-wrapper'>
+                <div class='logo'><a href='#'><img src='images/logo.png' alt='Образовательный центр МФЦ'/></a></div>
+                <div class="header-phone">
+                    <div class='phone'><span>+7 (495)</span> 921-22-73</div>
+                    <div class='contacts-address'>
+                        <span class='city-trigger' curcity='2'>Москва</span><span class='address-text'>, ул. Буженинова д.30, стр.1 / <strong>9:00 - 19:00</strong></span>
+                        <div class='city-selector'>
+                            <div class='cs-item' cityid='2'>
+                                <div class='city-name'><span>Москва</span></div>
+                                <div class='city-phone'><span>+7 (495)</span> 921-22-73</div>
+                                <div class='address-html'>, ул. Буженинова д.30, стр.1 / <strong>9:00 - 19:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='1'>
+                                <div class='city-name'><span>Санкт-Петербург</span></div>
+                                <div class='city-phone'><span>+7 (812)</span> 314-35-43</div>
+                                <div class='address-html'>, наб.канала Грибоедова, дом 5, офис 512 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='3'>
+                                <div class='city-name'><span>Калининград</span></div>
+                                <div class='city-phone'><span>+7 (4012)</span> 77-94-25</div>
+                                <div class='address-html'>, ул. Генделя, д.5 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='4'>
+                                <div class='city-name'><span>Брянск</span></div>
+                                <div class='city-phone'><span>+7 (4832)</span> 72-12-98</div>
+                                <div class='address-html'>, б-р Гагарина, 27, офис 228 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-links">
+                        <a href="#">Все контакты</a> / <a href="#">Все центры</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Сведения об образовательной организации</a>
+                    </div>
+                </div>
+
+                <div class='header-controls fc'>
+
+                    <span><a href='#'><img src='images/void.gif' class='ico ico-question' />Есть вопрос?</a></span>
+
+                    <div class='login-popup'>
+                        <div class='popup-cont'>
+                            <ul class='login-menu'>
+                                <li><a href='#'>Личный кабинет</a></li>
+                                <li><a href='#'>Параметры</a></li>
+                            </ul>
+                            <a class='logout' href='#'>Выйти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-search">
+                    <form method='get' action='#'>
+                        <div class="form-item">
+                            <input type="text" name="text" id="header_search" class="form-text" phvalue="Быстрый поиск" />
+                        </div>
+                        <input type="submit" class="form-submit" value="Найти"/>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class='main-menu fc'>
+            <div class='center-wrapper'>
+                <ul>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Курсы</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Курсы по рынку ценных бумаг</a></li>
+                            <li><a href='#'>Курсы бухгалтеров</a></li>
+                            <li><a href='#'>Курсы по налогообложению</a></li>
+                            <li><a href='#'>МСФО</a></li>
+                            <li><a href='#'>ПОДФТ и противодействие коррупции</a></li>
+                            <li><a href='#'>Курсы аудиторов</a></li>
+                            <li><a href='#'>Финансовая грамотность</a></li>
+                            <li><a href='#'>Обучение в кредитных организациях</a></li>
+                            <li><a href='#'>Страховое дело</a></li>
+                            <li><a href='#'>Обучение в сфере закупок</a></li>
+                            <li><a href='#'>Курсы инвестиционных советников</a></li>
+                            <li><a href='#'>Тестирование иностранных граждан</a></li>
+                            <li><a href='#'>Обучение НФО плану счетов и ОСБУ Банка России</a></li>
+                            <li><a href='#'>Обучение бюджетных учреждений</a></li>
+                            <li><a href='#'>Профессиональные стандарты</a></li>
+                            <li><a href='#'>Бизнес-тренинги</a></li>
+                            <li><a href='#'>Обучение предпенсионеров</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Семинары</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Семинары для эмитентов</a></li>
+                            <li><a href='#'>Семинары для микрофинансовых организаций</a></li>
+                            <li><a href='#'>Семинары для участников рынка коллективных инвестиций и НПФов</a></li>
+                            <li><a href='#'>Семинары для профучастников, банков и квалифицированных инвесторов</a></li>
+                            <li><a href='#'>Семинары в области экономики, финансов и менеджмента</a></li>
+                            <li><a href='#'>Семинары по бухгалтерскому учету, налогообложению и аудиту</a></li>
+                            <li><a href='#'>Семинары по международным стандартам финансовой отчетности</a></li>
+                            <li><a href='#'>Семинары для юристов</a></li>
+                            <li><a href='#'>Семинары для бюджетных учреждений и организаций</a></li>
+                            <li><a href='#'>Международные семинары</a></li>
+                            <li><a href='#'>Другие семинары</a></li>
+                            <li><a href='#'>Видеосеминары</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href='#'>Дистанционное обучение</a>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Аттестация</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Специалистам финансового рынка</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Корпоративное обучение</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Наши преподаватели</a></li>
+                            <li><a href='#'>Получить предложение</a></li>
+                            <li><a href='#'>Какое обучение Вам подходит</a></li>
+                            <li><a href='#'>Подписаться на новости</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Новости</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Новости</a></li>
+                            <li><a href='#'>Интервью и статьи</a></li>
+                            <li><a href='#'>Мы в СМИ и Интернете</a></li>
+                            <li><a href='#'>Пресс-релизы</a></li>
+                            <li><a href='#'>Анонсы</a></li>
+                            <li><a href='#'>Новости финансовой грамотности</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>О центре</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Об МФЦ</a></li>
+                            <li><a href='#'>История</a></li>
+                            <li><a href='#'>Наша команда</a></li>
+                            <li><a href='#'>Лицензии, допуски и награды</a></li>
+                            <li><a href='#'>Наши центры</a></li>
+                            <li><a href='#'>Наши партнеры</a></li>
+                            <li><a href='#'>Наши клиенты</a></li>
+                            <li><a href='#'>Наши преподаватели</a></li>
+                            <li><a href='#'>Реквизиты</a></li>
+                            <li><a href='#'>Сведения об образовательной организации</a></li>
+                            <li><a href='#'>Информация для клиентов</a></li>
+                            <li><a href='#'>Видеосюжеты</a></li>
+                            <li><a href='#'>Научно-исследовательская деятельность</a></li>
+                            <li><a href='#'>Завершенные проекты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Header END -->
+    
+    <!-- Body -->
+    
+    <div class="body">
+    
+        
+      <!-- Колонка во всю ширину страницы -->
+      
+      <div class="single-col">
+        
+        <div class="content">
+        
+          <div class="page-title">
+            <div class="center-wrapper">
+            
+              <!-- Breadcrumbs -->
+              
+              <div class="breadcrumbs">
+                <a href="#">Образовательный центр МФЦ</a><span>&rarr;</span>Заказ курса
+              
+              </div>
+              <!-- Breadcrumbs END -->
+              
+              <h1>Заказ курса</h1>
+              
+            </div>
+          </div>
+          
+          <!-- Контент текстовой страницы -->
+
+	<div class='center-wrapper'>
+	<div class='courses-content fc'>
+
+
+<div style='page-text'>
+
+
+
+<div class='common-form events-form'>
+<h3>Данные заказа</h3>
+</div>
+
+    <!-- 30.09.2016 -->
+<table class='events-table-3 events-table-3-order'>
+	<tr>
+		<th>Название курса</th>
+		<th>Цена</th>
+	</tr>
+	<tr>
+		<td class='name'>
+			<div class='cont'>
+				<div class='order-course-info-title'><a href='http://educenter.ru/course-series/courses/rcourses/rcourses_442.html'>Основы бухгалтерского учета и финансовой отчетности в некредитных финансовых организациях (НФО) (Модуль 1, повышение квалификации профессиональных бухгалтеров и аудиторов)</a></div>
+			</div>
+		</td>
+		<td class='price' price_1='35000' price_2='36000'>
+			35000 &#8399;
+		</td>
+	</tr>
+	<tr>
+		<td class="events-table-3-order-info">
+			<div class='cont'>
+                <div class="order-course-info">
+                    <div class="order-course-info-col">
+                        <div class="order-course-info-row">
+                            <div class="order-course-info-name">Начало:</div>
+                            <div class="order-course-info-value">31 октября 2016</div>
+                        </div>
+                        <div class="order-course-info-row">
+                            <div class="order-course-info-name">Запись до:</div>
+                            <div class="order-course-info-value">31 октября 2016</div>
+                        </div>
+                        <div class="order-course-info-row">
+                            <div class="order-course-info-name">Форма обучения:</div>
+                            <div class="order-course-info-value">Дневная</div>
+                        </div>
+                    </div>
+                    <div class="order-course-info-option option">
+                        <div class="order-course-info-option-title">Выберите форму участия:</div>
+                        <div class='common-form'>
+                            <select name='type_select' id='type_select' class='form-select'>
+                                <option value='1'>Очное участие</option>
+                                <option value='2'>Заочное участие</option>
+                                <option value='3'>Вечернее обучение</option>
+                                <option value='4'>Дневное обучение</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="order-course-info-coupon">
+                        <div class="order-course-info-option-title">Код скидки:
+                            <div class="help-block">
+                                <div class="help-block-icon">?</div>
+                                <div class="help-block-content">
+                                    <div class="help-block-title">Скидка</div>
+                                    <div class="help-block-text">Информация о скидке</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='order-course-info-coupons'>
+                            <div class="order-course-info-coupon-input">
+                                <input type="text" name="code" value="" />
+                                <a href="#" class="order-course-info-coupon-input-add"></a>
+                            </div>
+                            <div class="order-course-info-coupons-error">Купон не действителен</div>
+                            <div class="order-course-info-coupons-success">Купон принят. скидка <span>10</span>%</div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</td>
+		<td class="events-table-3-order-info"></td>
+	</tr>
+</table>
+
+<div class='tabbed-content common-tabs common-tabs-2 courses-tabs events-table-3 price-table events-table-3-order'>
+<div class='tabs'>
+	<div class='tab' rel='form-phy'>
+		<span>Физические лица</span>
+	</div>
+	<div class='tab' rel='form-jur'>
+		<span>Юридические лица</span>
+	</div>
+	<div class='tab' rel='form-online'>
+		<span>Онлайн оплата</span>
+	</div>
+</div>
+<div class='tabs-content'>
+	<div class='tab-content' rel='form-phy'>
+
+<div class='common-form personal-form'>
+	<form name='adminForm'  method='post' action='/netcat/add.php' id='personalForm' class='common-form personal-form long-form'>
+	<h4>Персональные данные</h4>
+			<input type='hidden' name='nc_token' value='74009f182676b4cd36978184f150ef1a' />
+			<input name='pid' type='hidden' value='442'>
+			<input name='cc' type='hidden' value='79'>
+			<input name='sub' type='hidden' value='120'>
+			<input name='catalogue' type='hidden' value='1'>
+			<input type='hidden' name='posting' value='1'>
+			<input type='hidden' name='pid' value='442'>
+			<input type='hidden' name='class' value='course'>
+			<input type='hidden' name='f_TypeForm' value='phis'>
+			<input type='hidden' name='f_Type' value='1'>
+
+
+			<div class='form-item'>
+				<label>ФИО участников  <span class='req'>*</span> (через запятую)</label>
+				<input type='text' class='form-text' name='f_Name' value='' />
+			</div>
+			<div class='form-item'>
+				<label>ФИО контактного лица</label>
+				<input type='text' class='form-text' name='f_Field_3' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Телефон  <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_6' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Электронная почта  <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_8' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Адрес</label>
+				<input type='text' class='form-text' name='f_Field_10' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Из каких источников вы узнали о нас</label>
+				<input type='text' class='form-text' name='f_Field_14' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Прочие пожелания</label>
+				<input type='text' class='form-text' name='f_Field_15' value='' />
+			</div>
+			<div class='form-item form-item-captcha'>
+				<label for='personal_captcha'>Введите код:&nbsp;<span class='req'>*</span></label>
+				<div class='captcha'><div class="g-recaptcha" data-sitekey="6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA"></div></div>
+			</div>
+			<input type='submit' value='Оформить' class='form-submit'/>
+	</form>
+</div>
+
+
+	</div>
+	<div class='tab-content' rel='form-jur'>
+
+<div class='common-form personal-form'>
+	<form name='adminForm'  method='post' enctype='multipart/form-data' action='/netcat/add.php' id='personalForm' class='common-form personal-form long-form'>
+	<h4>Контактные данные</h4>
+			<input type='hidden' name='nc_token' value='74009f182676b4cd36978184f150ef1a' />
+			<input name='pid' type='hidden' value='442'>
+			<input name='cc' type='hidden' value='79'>
+			<input name='sub' type='hidden' value='120'>
+			<input name='catalogue' type='hidden' value='1'>
+			<input type='hidden' name='posting' value='1'>
+			<input type='hidden' name='pid' value='442'>
+			<input type='hidden' name='class' value='course'>
+			<input type='hidden' name='f_TypeForm' value='jur'>
+			<input type='hidden' name='f_Type' value='1'>
+
+
+			<div class='form-item'>
+				<label>ФИО участников  <span class='req'>*</span> (через запятую)</label>
+				<input type='text' class='form-text' name='f_Name' value='' />
+			</div>
+			<div class='form-item'>
+				<label>ФИО контактного лица</label>
+				<input type='text' class='form-text' name='f_Field_3' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Телефон для связи <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_6' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Электронная почта для связи <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_8' value='' />
+			</div>
+			<div class='form-item file-form-item'>
+				<label for='personal_file'>Файл с данными</label>
+				<input type='file' name='f_Field_4' id='personal_file' />
+			</div>
+			<div class='hr'></div>
+			<h4>Информация о заказчике</h4>
+			<div class='form-item'>
+				<label>Название компании</label>
+				<input type='text' class='form-text' name='f_Field_5' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Юридический адрес</label>
+				<input type='text' class='form-text' name='f_Field_10' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Почтовый адрес</label>
+				<input type='text' class='form-text' name='f_Field_11' value='' />
+			</div>
+			<div class='form-item'>
+				<label>ИНН</label>
+				<input type='text' class='form-text' name='f_Field_12' value='' />
+			</div>
+			<div class='form-item'>
+				<label>КПП</label>
+				<input type='text' class='form-text' name='f_Field_13' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Расчетный счет</label>
+				<input type='text' class='form-text' name='f_Field_16' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Банк</label>
+				<input type='text' class='form-text' name='f_Field_17' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Корреспондентский счет</label>
+				<input type='text' class='form-text' name='f_Field_18' value='' />
+			</div>
+			<div class='form-item'>
+				<label>БИК</label>
+				<input type='text' class='form-text' name='f_Field_19' value='' />
+			</div>
+			<div class='form-item'>
+				<label>ФИО подписанта</label>
+				<input type='text' class='form-text' name='f_Field_20' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Должность подписанта</label>
+				<input type='text' class='form-text' name='f_Field_21' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Основание для подписи</label>
+				<input type='text' class='form-text' name='f_Field_22' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Из каких источников вы узнали о нас</label>
+				<input type='text' class='form-text'name='f_Field_14' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Прочие пожелания</label>
+				<input type='text' class='form-text'name='f_Field_15' value='' />
+			</div>
+			<div class='form-item form-item-captcha'>
+				<label for='personal_captcha'>Введите код:&nbsp;<span class='req'>*</span></label>
+				<div class='captcha'><div class="g-recaptcha" data-sitekey="6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA"></div></div>
+			</div>
+	<input type='submit' value='Оформить' class='form-submit'/>
+	</form>
+</div>
+</div>
+	<div class='tab-content' rel='form-online'>
+
+<div class='common-form personal-form'>
+	<form name='adminForm'  method='post' action='/netcat/add.php' id='personalForm' class='common-form personal-form long-form'>
+	<h4>Персональные данные</h4>
+			<input type='hidden' name='nc_token' value='74009f182676b4cd36978184f150ef1a' />
+			<input name='pid' type='hidden' value='442'>
+			<input name='cc' type='hidden' value='79'>
+			<input name='sub' type='hidden' value='120'>
+			<input name='catalogue' type='hidden' value='1'>
+			<input type='hidden' name='posting' value='1'>
+			<input type='hidden' name='pid' value='442'>
+			<input type='hidden' name='class' value='course'>
+			<input type='hidden' name='f_TypeForm' value='phis'>
+			<input type='hidden' name='f_Type' value='1'>
+
+
+			<div class='form-item'>
+				<label>ФИО участников  <span class='req'>*</span> (через запятую)</label>
+				<input type='text' class='form-text' name='f_Name' value='' />
+			</div>
+			<div class='form-item'>
+				<label>ФИО контактного лица</label>
+				<input type='text' class='form-text' name='f_Field_3' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Телефон  <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_6' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Электронная почта  <span class='req'>*</span></label>
+				<input type='text' class='form-text' name='f_Field_8' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Адрес</label>
+				<input type='text' class='form-text' name='f_Field_10' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Из каких источников вы узнали о нас</label>
+				<input type='text' class='form-text' name='f_Field_14' value='' />
+			</div>
+			<div class='form-item'>
+				<label>Прочие пожелания</label>
+				<input type='text' class='form-text' name='f_Field_15' value='' />
+			</div>
+			<div class='form-item form-item-captcha'>
+				<label for='personal_captcha'>Введите код:&nbsp;<span class='req'>*</span></label>
+				<div class='captcha'><div class="g-recaptcha" data-sitekey="6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA"></div></div>
+			</div>
+			<input type='submit' value='Оформить' class='form-submit'/>
+	</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+          </div>
+          </div>
+          <!-- Контент текстовой страницы END -->
+          
+        </div>
+        
+      </div>
+      
+      <!-- Колонка во всю ширину страницы END -->
+        
+      
+    </div>
+    
+    <!-- Body END -->
+  </div>
+</div>
+
+<!-- Footer -->
+
+<div class='footer'>
+
+	<div class='center-wrapper'>
+
+		<div class='footer-col-1'>
+			<a href='#'><img src='images/logo-2.png' alt='МФЦ'/></a>
+		</div>
+
+		<div class='footer-col-2'>
+			<div class='footer-copy'>
+              &copy; Образовательный центр МФЦ 1998&mdash;2020. <p>Все права защищены.</p>
+			</div>
+			<div class='footer-address'>
+				107023, Москва, ул. Буженинова, д. 30, стр.1
+			</div>
+			<dl class='footer-contacts fc'>
+				<dt>Тел:</dt>
+				<dd>+7(495) 921-2273</dd>
+				<dt>E-mail:</dt>
+				<dd>ecc@educenter.ru</dd>
+			</dl>
+		</div>
+
+		<div class='footer-col-3'>
+			<h5>Полезная информация</h5>
+			<ul class='footer-menu'>
+				<li><a href='#'>Политика конфиденциальности</a></li>
+				<li><a href='#'>Для прессы</a></li>
+				<li><a href='#'>Условия использования материалов</a></li>
+				<li><a href='#'>Карта сайта</a></li>
+			</ul>
+		</div>
+
+		<div class='footer-col-4'>
+			<h5>Следите за нами</h5>
+			<div class='footer-sn-links'>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-fb' />Facebook</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-li' />Linkedin</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-twitter' />Twitter</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico' />RSS</a>
+			</div>
+		</div>
+
+		<div class='footer-bottom fc'>
+			<div class='footer-col-1'>
+				<div class="footer-payments"><img src="images/payments.png" alt="" width="196" height="28" /></div>
+			</div>
+			<div class='footer-col-2'>
+				Лицензия на образовательную деятельность №029045
+			</div>
+			<div class='footer-col-3'>
+				Нашли ошибку? <span class='hl'>Выделите</span>  это слово <br />
+				или предложение и нажмите <strong>Ctrl + Enter</strong>.
+				<script type="text/javascript" src="/layout/orphus/orphus.js"></script>
+				<a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="/layout/orphus/orphus.gif" border="0" width="88" height="31" style='visibility: hidden' /></a>
+			</div>
+			<div class='footer-col-4'>
+				Разработка проекта - <a href='http://www.bilingo.ru'>Bilingo</a>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Footer END -->
+  
+<!-- Wrapper END -->
+
+<!-- Pop-ups -->
+
+
+
+
+
+<!-- Pop-ups END -->
+
+</body>
+
+
+
+
+</html>

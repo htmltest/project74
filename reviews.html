@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
+<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" media="all"/>
 <!--[if lte IE 8]>
   <link rel="stylesheet" type="text/css" href="css/ie7-8.css" media="screen"/>
 <![endif]-->
@@ -29,6 +30,8 @@
 <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
 
 <script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
@@ -48,121 +51,178 @@
 <div class="top-wrap">
   <div class="top-main">
     <!-- Header -->
-    
-    <div class="header">
-      
-      <div class="header-top fc">
-      	<div class="center-wrapper">
-      		<div class="logo">
-      		  <a href="#"><img src="images/logo.png" alt="МФЦ"/></a>
-      		</div>
-      		
-      		<div class="header-phone">
-      		  <div class="phone">
-      		    <span>+7 (495)</span> 921-22-73
-      		  </div>
-      		  <div class="contacts-links">
-      		    <a href="#">Все контакты</a> / <a href="#">Все центры</a>
-      		  </div>
-      		</div>
-      		
-      		<div class="header-controls fc">
-      		  
-      		  <span><a href="#"><img src="images/void.gif" class="ico ico-question" />Есть вопрос?</a></span>
-      		  <span class="login-popup-trigger"><img src="images/void.gif" class="ico ico-user" /><span class="u-link">Василий Петров</span></span>
-              
-            <div class="login-popup">
-              <div class="popup-cont">
-              	<ul class="login-menu">
-              	  <li><a href="#">Личный кабинет</a></li>
-              	  <li><a href="#">Параметры</a></li>
-              	</ul>
-              	<a class="logout" href="#">Выйти</a>
-              </div>
+    <div class='header'>
+
+        <div class='header-top fc'>
+            <div class='center-wrapper'>
+                <div class='logo'><a href='#'><img src='images/logo.png' alt='Образовательный центр МФЦ'/></a></div>
+                <div class="header-phone">
+                    <div class='phone'><span>+7 (495)</span> 921-22-73</div>
+                    <div class='contacts-address'>
+                        <span class='city-trigger' curcity='2'>Москва</span><span class='address-text'>, ул. Буженинова д.30, стр.1 / <strong>9:00 - 19:00</strong></span>
+                        <div class='city-selector'>
+                            <div class='cs-item' cityid='2'>
+                                <div class='city-name'><span>Москва</span></div>
+                                <div class='city-phone'><span>+7 (495)</span> 921-22-73</div>
+                                <div class='address-html'>, ул. Буженинова д.30, стр.1 / <strong>9:00 - 19:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='1'>
+                                <div class='city-name'><span>Санкт-Петербург</span></div>
+                                <div class='city-phone'><span>+7 (812)</span> 314-35-43</div>
+                                <div class='address-html'>, наб.канала Грибоедова, дом 5, офис 512 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='3'>
+                                <div class='city-name'><span>Калининград</span></div>
+                                <div class='city-phone'><span>+7 (4012)</span> 77-94-25</div>
+                                <div class='address-html'>, ул. Генделя, д.5 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                            <div class='cs-item' cityid='4'>
+                                <div class='city-name'><span>Брянск</span></div>
+                                <div class='city-phone'><span>+7 (4832)</span> 72-12-98</div>
+                                <div class='address-html'>, б-р Гагарина, 27, офис 228 / <strong>9:00 - 18:00</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-links">
+                        <a href="#">Все контакты</a> / <a href="#">Все центры</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Сведения об образовательной организации</a>
+                    </div>
+                </div>
+
+                <div class='header-controls fc'>
+
+                    <span><a href='#'><img src='images/void.gif' class='ico ico-question' />Есть вопрос?</a></span>
+
+                    <div class='login-popup'>
+                        <div class='popup-cont'>
+                            <ul class='login-menu'>
+                                <li><a href='#'>Личный кабинет</a></li>
+                                <li><a href='#'>Параметры</a></li>
+                            </ul>
+                            <a class='logout' href='#'>Выйти</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-search">
+                    <form method='get' action='#'>
+                        <div class="form-item">
+                            <input type="text" name="text" id="header_search" class="form-text" phvalue="Быстрый поиск" />
+                        </div>
+                        <input type="submit" class="form-submit" value="Найти"/>
+                    </form>
+                </div>
+
             </div>
-      		  
-      		</div>
-          
-          <div class="header-search">
-        	  <form action=".">
-        	    <div class="form-item">
-        	    	<input type="text" name="header_search" id="header_search" class="form-text" phvalue="Быстрый поиск" />
-        	    </div>
-        	    <input type="submit" class="form-submit" value="Найти"/>
-        	  </form>
-        	</div>
-          
-      	</div>
-      </div>
-      
-      <div class="main-menu fc">
-        <div class="center-wrapper">
-        	
-        	<ul>
-        	  <li>
-        	    <span class="link">
-        	      <a href="#">Направления обучения</a><span class="arr"><img src="images/void.gif" /></span>
-        	    </span>
-              <ul class="submenu">
-                <li><a href="#">Курсы по рынку ценных бумаг</a></li>
-                <li><a href="#">Курсы аудиторов</a></li>
-                <li><a href="#">МСФО</a></li>
-                <li><a href="#">Страховое дело</a></li>
-                <li><a href="#">Курсы бухгалтеров</a></li>
-                <li><a href="#">Курсы по налогообложению</a></li>
-                <li><a href="#">Противодействие легализации</a></li>
-              </ul>
-        	  </li>
-        	  <li>
-        	    <span class="link">
-        	      <a href="#">Семинары</a><span class="arr"><img src="images/void.gif" /></span>
-        	    </span>
-              <ul class="submenu">
-                <li><a href="#">Семинары по рынку ценных бумаг</a></li>
-                <li><a href="#">Семинары аудиторов</a></li>
-                <li><a href="#">Семинары</a></li>
-                <li><a href="#">Семинары бухгалтеров</a></li>
-                <li><a href="#">Семинары по налогообложению</a></li>
-                <li><a href="#">Семинары легализации</a></li>
-              </ul>
-        	  </li>
-        	  <li>
-        	    <span class="link">
-        	      <a href="#">Корпоративное обучение</a><span class="arr"><img src="images/void.gif" /></span>
-        	    </span>
-              <ul class="submenu">
-                <li><a href="#">Корпоративное</a></li>
-                <li><a href="#">Корпоративное аудиторов</a></li>
-                <li><a href="#">Корпоративное</a></li>
-                <li><a href="#">Корпоративное бухгалтеров</a></li>
-                <li><a href="#">Корпоративное по налогообложению</a></li>
-                <li><a href="#">Корпоративное легализации</a></li>
-              </ul>
-        	  </li>
-        	  <li>
-        	    <span class="link">
-        	      <a href="#">Пресс-центр</a>
-        	    </span>
-        	  </li>
-        	  <li>
-        	    <span class="link">
-        	      <a href="#">О центре</a><span class="arr"><img src="images/void.gif" /></span>
-        	    </span>
-              <ul class="submenu">
-                <li><a href="#">Корпоративное</a></li>
-                <li><a href="#">Корпоративное аудиторов</a></li>
-                <li><a href="#">Корпоративное</a></li>
-                <li><a href="#">Корпоративное бухгалтеров</a></li>
-                <li><a href="#">Корпоративное по налогообложению</a></li>
-                <li><a href="#">Корпоративное легализации</a></li>
-              </ul>
-        	  </li>
-        	</ul>
         </div>
-      </div>
-      
+
+        <div class='main-menu fc'>
+            <div class='center-wrapper'>
+                <ul>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Курсы</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Курсы по рынку ценных бумаг</a></li>
+                            <li><a href='#'>Курсы бухгалтеров</a></li>
+                            <li><a href='#'>Курсы по налогообложению</a></li>
+                            <li><a href='#'>МСФО</a></li>
+                            <li><a href='#'>ПОДФТ и противодействие коррупции</a></li>
+                            <li><a href='#'>Курсы аудиторов</a></li>
+                            <li><a href='#'>Финансовая грамотность</a></li>
+                            <li><a href='#'>Обучение в кредитных организациях</a></li>
+                            <li><a href='#'>Страховое дело</a></li>
+                            <li><a href='#'>Обучение в сфере закупок</a></li>
+                            <li><a href='#'>Курсы инвестиционных советников</a></li>
+                            <li><a href='#'>Тестирование иностранных граждан</a></li>
+                            <li><a href='#'>Обучение НФО плану счетов и ОСБУ Банка России</a></li>
+                            <li><a href='#'>Обучение бюджетных учреждений</a></li>
+                            <li><a href='#'>Профессиональные стандарты</a></li>
+                            <li><a href='#'>Бизнес-тренинги</a></li>
+                            <li><a href='#'>Обучение предпенсионеров</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Семинары</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Семинары для эмитентов</a></li>
+                            <li><a href='#'>Семинары для микрофинансовых организаций</a></li>
+                            <li><a href='#'>Семинары для участников рынка коллективных инвестиций и НПФов</a></li>
+                            <li><a href='#'>Семинары для профучастников, банков и квалифицированных инвесторов</a></li>
+                            <li><a href='#'>Семинары в области экономики, финансов и менеджмента</a></li>
+                            <li><a href='#'>Семинары по бухгалтерскому учету, налогообложению и аудиту</a></li>
+                            <li><a href='#'>Семинары по международным стандартам финансовой отчетности</a></li>
+                            <li><a href='#'>Семинары для юристов</a></li>
+                            <li><a href='#'>Семинары для бюджетных учреждений и организаций</a></li>
+                            <li><a href='#'>Международные семинары</a></li>
+                            <li><a href='#'>Другие семинары</a></li>
+                            <li><a href='#'>Видеосеминары</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href='#'>Дистанционное обучение</a>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Аттестация</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Специалистам финансового рынка</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Корпоративное обучение</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Наши преподаватели</a></li>
+                            <li><a href='#'>Получить предложение</a></li>
+                            <li><a href='#'>Какое обучение Вам подходит</a></li>
+                            <li><a href='#'>Подписаться на новости</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>Новости</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Новости</a></li>
+                            <li><a href='#'>Интервью и статьи</a></li>
+                            <li><a href='#'>Мы в СМИ и Интернете</a></li>
+                            <li><a href='#'>Пресс-релизы</a></li>
+                            <li><a href='#'>Анонсы</a></li>
+                            <li><a href='#'>Новости финансовой грамотности</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class='link'>
+                            <a href='#'>О центре</a><span class='arr'><img src='images/void.gif' /></span>
+                        </span>
+                        <ul class='submenu'>
+                            <li><a href='#'>Об МФЦ</a></li>
+                            <li><a href='#'>История</a></li>
+                            <li><a href='#'>Наша команда</a></li>
+                            <li><a href='#'>Лицензии, допуски и награды</a></li>
+                            <li><a href='#'>Наши центры</a></li>
+                            <li><a href='#'>Наши партнеры</a></li>
+                            <li><a href='#'>Наши клиенты</a></li>
+                            <li><a href='#'>Наши преподаватели</a></li>
+                            <li><a href='#'>Реквизиты</a></li>
+                            <li><a href='#'>Сведения об образовательной организации</a></li>
+                            <li><a href='#'>Информация для клиентов</a></li>
+                            <li><a href='#'>Видеосюжеты</a></li>
+                            <li><a href='#'>Научно-исследовательская деятельность</a></li>
+                            <li><a href='#'>Завершенные проекты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-    
+
     <!-- Header END -->
     
     <!-- Body -->
@@ -3955,56 +4015,69 @@
 
 <!-- Footer -->
 
-<div class="footer">
-  
-  <div class="center-wrapper">
-    
-    <div class="footer-col-1">
-      <a href="#"><img src="images/logo-2.png" alt="МФЦ"/></a>
-    </div>
-    
-    <div class="footer-col-2">
-      <div class="footer-copy">
-        &copy; МФЦб 1998&mdash;2013. Все права защищены.
-      </div>
-      <div class="footer-address">
-        107023, Москва, ул. Буженинова, д. 30
-      </div>
-      <dl class="footer-contacts fc">
-        <dt>Тел:</dt>
-        <dd>(495) 921-2273</dd>
-        <dt>Факс:</dt>
-        <dd>(495) 964-0480</dd>
-        <dt>E-mail:</dt>
-        <dd>ecc@educenter.ru</dd>
-      </dl>
-    </div>
-    
-    <div class="footer-col-3">
-      <h5>Полезная информация</h5>
-      <ul class="footer-menu">
-        <li><a href="#">Для прессы</a></li>
-        <li><a href="#">Условия использования материалов</a></li>
-        <li><a href="#">Карта сайта</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-col-4">
-      <h5>Следите за нами</h5>
-      <div class="footer-sn-links">
-        <a href="#" class="sn-item"><img src="images/void.gif" class="ico ico-fb" />Facebook</a>
-        <a href="#" class="sn-item"><img src="images/void.gif" class="ico ico-li" />Linkedin</a>
-        <a href="#" class="sn-item"><img src="images/void.gif" class="ico ico-twitter" />Twitter</a>
-      </div>
-    </div>
-    
-    <div class="footer-licences">
-      <p>Лицензия на образовательную деятельность №029045</p>
-      <p>Свидетельство о государственной аккредитации №010934</p>
-    </div>
-    
-  </div>
-  
+<div class='footer'>
+
+	<div class='center-wrapper'>
+
+		<div class='footer-col-1'>
+			<a href='#'><img src='images/logo-2.png' alt='МФЦ'/></a>
+		</div>
+
+		<div class='footer-col-2'>
+			<div class='footer-copy'>
+              &copy; Образовательный центр МФЦ 1998&mdash;2020. <p>Все права защищены.</p>
+			</div>
+			<div class='footer-address'>
+				107023, Москва, ул. Буженинова, д. 30, стр.1
+			</div>
+			<dl class='footer-contacts fc'>
+				<dt>Тел:</dt>
+				<dd>+7(495) 921-2273</dd>
+				<dt>E-mail:</dt>
+				<dd>ecc@educenter.ru</dd>
+			</dl>
+		</div>
+
+		<div class='footer-col-3'>
+			<h5>Полезная информация</h5>
+			<ul class='footer-menu'>
+				<li><a href='#'>Политика конфиденциальности</a></li>
+				<li><a href='#'>Для прессы</a></li>
+				<li><a href='#'>Условия использования материалов</a></li>
+				<li><a href='#'>Карта сайта</a></li>
+			</ul>
+		</div>
+
+		<div class='footer-col-4'>
+			<h5>Следите за нами</h5>
+			<div class='footer-sn-links'>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-fb' />Facebook</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-li' />Linkedin</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico ico-twitter' />Twitter</a>
+				<a href='#' class='sn-item'><img src='images/void.gif' class='ico' />RSS</a>
+			</div>
+		</div>
+
+		<div class='footer-bottom fc'>
+			<div class='footer-col-1'>
+				<div class="footer-payments"><img src="images/payments.png" alt="" width="196" height="28" /></div>
+			</div>
+			<div class='footer-col-2'>
+				Лицензия на образовательную деятельность №029045
+			</div>
+			<div class='footer-col-3'>
+				Нашли ошибку? <span class='hl'>Выделите</span>  это слово <br />
+				или предложение и нажмите <strong>Ctrl + Enter</strong>.
+				<script type="text/javascript" src="/layout/orphus/orphus.js"></script>
+				<a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="/layout/orphus/orphus.gif" border="0" width="88" height="31" style='visibility: hidden' /></a>
+			</div>
+			<div class='footer-col-4'>
+				Разработка проекта - <a href='http://www.bilingo.ru'>Bilingo</a>
+			</div>
+		</div>
+
+	</div>
+
 </div>
 
 <!-- Footer END -->

@@ -1303,3 +1303,69 @@ function handleReviews() {
     
   };
 })( jQuery );
+
+
+$(document).ready(function() {
+
+    var dateFormat = 'dd.mm.yy';
+    $('.coupons-filter-input-date input').datepicker({
+        dateFormat: dateFormat
+    });
+
+    $('body').on('click', '.coupons-item-window-close', function(e) {
+        $('.coupons-item-window').removeClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.coupons-item-order').length == 0) {
+            $('.coupons-item-window').removeClass('open');
+        }
+    });
+
+    $('body').on('click', '.coupons-item-link', function(e) {
+        var curWindow = $(this).parent().find('.coupons-item-window');
+        if (curWindow.hasClass('open')) {
+            curWindow.removeClass('open');
+        } else {
+            $('.coupons-item-window').removeClass('open');
+            curWindow.addClass('open');
+        }
+        e.preventDefault();
+    });
+
+    $('.coupons-item-window-form form').each(function() {
+        $(this).validate({
+			rules: {
+				comment: 'required'
+			},
+			messages: {
+				comment: 'Для бронирования необходимо указать комментарий'
+			}
+        });
+    });
+
+    $('body').on('click', '.order-course-info-coupon-input-add', function(e) {
+        var curValue = $('.order-course-info-coupon-input input').val();
+        //  тут можно сделать ajax запрос
+        if (curValue != '0') {
+            $('.order-course-info-coupons-error').hide();
+            $('.order-course-info-coupon-item').remove();
+            $('.order-course-info-coupons').append('<div class="order-course-info-coupon-item">' + curValue + '<a href="#"></a></div>');
+            $('.order-course-info-coupons-success').show();
+            $('.order-course-info-coupons-success span').html('10');
+        } else {
+            $('.order-course-info-coupons-error').show();
+            $('.order-course-info-coupons-success').hide();
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.order-course-info-coupon-item a', function(e) {
+        $(this).parent().remove();
+        $('.order-course-info-coupons-success').hide();
+        $('.order-course-info-coupon-item').remove();
+        e.preventDefault();
+    });
+
+});
