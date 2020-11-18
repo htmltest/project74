@@ -1562,3 +1562,9 @@ display: block;
 .video-single-side-tags a:hover {text-decoration:underline}
 
 .video-single-side-likes {margin:35px 0 0 -4px}
+
+.distance-course-length {margin:-16px 0 38px 0}
+.related-events .distance-course-length {margin:-16px 0 13px 0}
+.distance-course-length-inner {display:inline-block; vertical-align:top; padding:6px 25px 8px 10px; color:#000; background:#ffffdf; line-height:18px; font-weight:normal}
+.distance-course-length-inner strong {font-weight:bold; display:block}
+.mainpage-upcoming-events tr:hover .distance-course-length-inner {background:#eff2f0}
