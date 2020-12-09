@@ -576,6 +576,7 @@ p.big {  font-size:18px;  line-height:24px;}
 .events-table-3 .name {  padding:25px 20px 26px 0;  width:374px;}
 .events-table-3 .option {  width:320px;  padding-top:15px;}
 .events-table-3 .price {  padding-top:25px;}
+.events-table-3 .price span {display:block; font-size:14px; opacity:0.5; font-weight:normal; text-decoration:line-through}
 .events-table-3 .dates {  font-size: 14px;  font-weight: normal;  padding: 10px 0 9px 0;}
 .events-table-3 .form {  font-size:14px;  font-weight:normal;}
 .common-form .param-selector {  position:relative;  height:36px;}
@@ -1401,7 +1402,7 @@ display: block;
 */
 
 .order-course-price span {font-size:14px; opacity:.5; font-weight:normal; text-decoration:line-through; margin:0 0 0 5px}
-.order-data-value-price span {font-size:14px; opacity:.5; font-weight:normal; text-decoration:line-through; margin:0 0 0 5px; vertical-align:top}
+.order-data-value-price span {font-size:14px; opacity:.5; font-weight:normal; text-decoration:line-through; margin:-2px 0 0 5px; vertical-align:middle}
 
 .order-notice {font-size:14px; line-height:18px; float:left; width:100%; padding:34px 0 0 0}
 
@@ -1510,6 +1511,9 @@ display: block;
 .order-course-info-coupons-success {display:none; position:absolute; left:0; top:43px; font-size:12px; line-height:18px; color:#4a9c58}
 .order-course-info-coupon-item {float:left; margin:0 0 0 20px; padding:0 17px 0 0; position:relative; font-weight:bold; font-size:14px; line-height:36px}
 .order-course-info-coupon-item a {display:block; width:10px; height:10px; position:absolute; right:0; top:14px; background:url(../images/order-course-info-coupon-item.png)}
+
+.order-course-info-coupon-2 .order-course-info-option-title {float:left; padding-top:7px}
+.order-course-info-coupon-2 .order-course-info-coupons {float:left; margin:0 0 0 20px}
 
 .help-block-content {box-shadow:2px 2px 7px rgba(181, 191, 185, .77)}
 
