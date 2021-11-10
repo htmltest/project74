@@ -919,8 +919,6 @@ span.events-top-month {background:url('/layout/images/month.png') no-repeat left
     .iradio.checked {        background-position: -18px 0;    }
     .iradio.disabled {        background-position: 0 0;        opacity:.5;        filter:alpha(opacity=50);        cursor: default;    }
     .iradio.checked.disabled {        background-position: -18px 0;        filter:alpha(opacity=50);        cursor: default;    }
-/* Retina support */@media only screen and (-webkit-min-device-pixel-ratio: 1.5),       only screen and (-moz-min-device-pixel-ratio: 1.5),       only screen and (-o-min-device-pixel-ratio: 3/2),       only screen and (min-device-pixel-ratio: 1.5) {    .icheckbox,    .iradio {        background-image: url(futurico@2x.png);        -webkit-background-size: 144px 19px;        background-size: 144px 19px;    }
-}
 .form-radios label {  width: auto;  position: relative;  padding: 0px 0 6px 25px;  margin: 0 0 0 0;}
 .popup-vote {  width:590px;  line-height:18px;}
 .popup-vote h2 {  font-weight:bold;  margin:32px 0 24px 0;}
@@ -1572,3 +1570,209 @@ display: block;
 .distance-course-length-inner {display:inline-block; vertical-align:top; padding:6px 25px 8px 10px; color:#000; background:#ffffdf; line-height:18px; font-weight:normal}
 .distance-course-length-inner strong {font-weight:bold; display:block}
 .mainpage-upcoming-events tr:hover .distance-course-length-inner {background:#eff2f0}
+
+.td-mobile-title {display:none}
+.mobile-menu-link {display:none}
+
+@media screen and (max-width:1019px) {
+    body, html {min-width:0; height:auto}
+
+    body {font-size:16px; line-height:24px}
+
+    .top-wrap {min-width:0; min-height:0}
+    .top-main {padding:80px 0 0 0; overflow:visible}
+
+    .header {position:fixed; left:0; top:0; right:0; background:#fff; z-index:99; height:80px}
+    .header.fixed {box-shadow:0px 15px 10px rgba(0, 0, 0, 0.1)}
+    .header-top {height:80px}
+    .header .logo {margin:14px 0 0 0}
+    .header .logo img {width:100px}
+    
+    .mobile-menu-open .header {height:auto; bottom:0; overflow:auto}
+
+    .center-wrapper {width:auto}
+
+    .header-phone {display:none}
+    .header-controls {display:none}
+    .header-search {display:none}
+
+    .main-menu {display:none}
+    .mobile-menu-open .main-menu {display:block}
+    .main-menu ul {margin-left:0}
+    .main-menu ul li {float:none; margin:0; background:none}
+    .main-menu ul li .link {display:block}
+    .main-menu ul li a {display:block; padding-left:0; float:none}
+    .main-menu .submenu {position:relative; left:auto; top:auto; margin:0; min-width:0}
+
+    .mainpage-events {min-width:0}
+
+    .mainpage-projects .projects-col {float:none; width:auto}
+    .mainpage-upcoming-events .events-table {width:auto; display:block}
+    .mainpage-upcoming-events .events-table tbody {display:block}
+    .mainpage-upcoming-events .events-table tr {display:block; padding:20px; border-top:1px solid #e5e5e5}
+    .mainpage-upcoming-events .events-table tr.first {display:none}
+    .mainpage-upcoming-events .events-table tr.first+tr {border-top:none}
+    .mainpage-upcoming-events .events-table .name {width:auto; display:block; padding:0; border:none}
+    .mainpage-upcoming-events .events-table .date {width:auto; display:block; padding:10px 0 0 0; border:none}
+    .mainpage-upcoming-events .events-table .form {width:auto; display:block; padding:10px 0 0 0; border:none}
+    .mainpage-upcoming-events .events-table .price {width:auto; display:block; padding:10px 0 0 0; border:none}
+    .mainpage-upcoming-events .events-table .price-content {width:auto}
+    .price-content .prices {padding-left:20px; padding-right:20px; text-align:center}
+    .mainpage-upcoming-events .events-table .price-1 {float:none; display:inline-block; vertical-align:top}
+    .mainpage-upcoming-events .events-table .price-2 {float:none; display:inline-block; vertical-align:top}
+    .price-content .signup, .price-content .signup:visited {margin-left:20px; margin-right:20px}
+    .distance-course-length {margin:0}
+
+    .mainpage-calendar {padding-left:20px; padding-right:20px}
+    .calendar-carousel {width:auto}
+    .calendar-monthes {width:auto; margin:0; text-align:center; left:0; right:0}
+    .calendar-calendar {width:auto}
+    .calendar-month-prev {z-index:7}
+    .calendar-month-next {z-index:7}
+    .calendar-week-day {width:14.28%; box-sizing:border-box}
+    .calendar-day {width:14.28%; box-sizing:border-box}
+    .calendar-day-announce {right:10px}
+    .calendar-day-announce-item {width:100%; box-sizing:border-box; padding:0; background:none}
+
+    .partners-carousel .jcarousel-clip {width:100%}
+
+    .footer {height:auto !important; margin-top:0 !important}
+    .footer-col-1 {display:none; float:none; width:auto; margin:20px 0 0 0}
+    .footer-col-2 {float:none; width:auto; margin:20px 0 0 0}
+    .footer-col-3 {float:none; width:auto; margin:20px 0 0 0}
+    .footer-col-4 {float:none; width:auto; margin:20px 0 0 0}
+    .footer-bottom .footer-col-1 {display:block}
+    .footer-bottom .footer-col-3 {display:none}
+
+    .article-pic {width:auto}
+    .article-pic img {max-width:100%}
+
+    .feedback-form {width:auto; padding-right:20px}
+    .feedback-form .form-item {float:none}
+    .feedback-form #feedback_name {width:100%; box-sizing:border-box}
+    .feedback-form #feedback_email {width:100%; box-sizing:border-box}
+    .common-form .form-text {width:100%; box-sizing:border-box}
+    .common-form .form-textarea {width:100%; box-sizing:border-box}
+    .common-form .form-text, .NFI-wrapper .NFI-filename, .common-form .form-textarea {margin:0; float:none}
+    .common-form .param-sel {float:none; width:auto; margin:0}
+    .common-form .param-selector .dropdown {left:0; width:auto; right:0}
+
+    .table-mobile {width:auto}
+    .table-mobile tr {display:block}
+    .table-mobile tr.first {display:none}
+    .table-mobile tr td {display:block; padding-left:0; padding-right:0}
+    .td-mobile-title {display:block; font-weight:bold}
+
+    .mainpage-partners {padding-left:20px; padding-right:20px}
+
+    .post-comments .comment-body {padding-right:0; padding-bottom:50px}
+    .post-comments .reply-button {display:block; bottom:0; left:10px}
+    .post-comments .reply-button span {left:auto; top:auto}
+    .post-comments .author {position:relative; right:auto; top:auto; width:auto}
+    .post-comments .comment-body:hover {background:none; padding-left:14px !important; margin-left:-9px !important}
+
+    .breadcrumbs {font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+    .content-404 .breadcrumbs {padding-top:0}
+    .breadcrumbs a {display:none}
+    .breadcrumbs span {display:none; padding:0}
+    .breadcrumbs a:last-of-type {display:inline-block; padding:0 0 0 20px; vertical-align:top; font-size:16px; line-height:24px; letter-spacing:0; text-decoration:none}
+    .breadcrumbs span:last-of-type {display:block; position:absolute; left:0; top:1px; font-size:16px; line-height:24px; letter-spacing:0; pointer-events:none; transform:rotate(-180deg)}
+
+    .popup {width:90%}
+
+    .upcoming-courses-2 {padding-left:20px; padding-right:20px; margin:0}
+    .upcoming-courses-content {margin-left:0}
+    .upcoming-courses-2 .upcoming-courses-item {float:none; width:auto; margin-left:0; border-left:none; border-top:1px solid #007c65}
+    .upcoming-courses-2 .signup, .upcoming-courses-2 .signup:visited {float:none; text-align:center}
+
+    .mp-education-item, .mp-education-item:visited {float:none; width:auto}
+
+    .presslist-preview {width:auto}
+    .presslist-preview-item {display:block; width:auto}
+
+    .key-clients-item {float:none; margin-right:0; width:auto}
+
+    .clients-list-item {float:none; margin-right:0; width:auto}
+
+    .partners-list {margin-right:0}
+    .partners-list-item {width:50%; margin-right:0}
+    .partners-list-item .pic {width:100%}
+    .partners-list-item .pic-cont {width:100%}
+
+    .books-carousel {width:auto}
+    .books-carousel .jcarousel-container {width:auto}
+    .books-carousel .jcarousel-clip {width:auto}
+    .books-carousel > .jcarousel-prev {left:0; display:none !important}
+    .books-carousel > .jcarousel-next {right:0; display:none !important}
+    .books-carousel .jcarousel-container .jcarousel-prev {left:0}
+    .books-carousel .jcarousel-container .jcarousel-next {right:0}
+
+    .book-card .pic-price {float:none; margin:0 auto}
+    .book-card .descr {float:none; width:auto; margin:20px 0 0 0}
+    .events-table-2 {display:block; width:auto}
+    .events-table-2 tbody {display:block}
+    .events-table-2 tr {display:block; padding:20px 0; border-top:1px solid #e5e5e5}
+    .events-table-2 tr:first-child {border-top:none}
+    .events-table-2 td {display:block; border-bottom:none}
+    .events-table-2 .name {width:auto}
+    .events-table-2 .name .cont {padding:0; border:none}
+    .events-table-2 .prices {width:auto; text-align:center}
+    .events-table-2 .prices .price {float:none; display:inline-block; vertical-align:top}
+    .events-table-2 .sign-up {padding:0; text-align:center}
+    .events-table-2 .sign-up a, .events-table-2 .sign-up a:visited {width:100%}
+
+    .teachers-list .teachers-list-item {float:none; width:auto}
+
+    .teacher-card .pic {float:none; width:auto; margin:0; text-align:center}
+    .teacher-card .descr {margin:20px 0 0 0}
+
+    .teacher-related-events .seminars-table {width:auto; margin-left:0; margin-right:0; display:block}
+    .teacher-related-events .seminars-table tbody {display:block}
+    .teacher-related-events .seminars-table tr {display:block; padding:20px 0; border-top:1px solid #e5e5e5}
+    .teacher-related-events .seminars-table tr:first-child {border-top:none}
+    .teacher-related-events .seminars-table td {display:block; border-bottom:none; padding:0}
+    .teacher-related-events .seminars-table .name {width:auto}
+    .teacher-related-events .seminars-table .price {padding:20px 0 0 0}
+    .teacher-related-events .seminars-table .price-content {width:auto; text-align:center}
+    .teacher-related-events .seminars-table .prices {width:auto; text-align:center}
+    .teacher-related-events .seminars-table .prices .price-1 {float:none; display:inline-block; vertical-align:top}
+    .teacher-related-events .seminars-table .prices .price-2 {float:none; display:inline-block; vertical-align:top}
+
+    .reviews-wide .course-reviews-item {width:auto}
+    .reviews-wide .course-reviews-item .descr {width:auto}
+
+    .clients-list {margin:0}
+    .teachers-list, .teachers-list-compact {margin:0}
+    .teachers-list .teachers-list-item {margin-right:0}
+
+    .center-route-l {float:none; width:auto}
+    .center-photos-l {float:none; width:auto}
+    .center-photos-r {float:none; width:auto}
+
+    .l-col {float:none; width:auto; margin:0; padding:0}
+    .r-col {float:none; width:auto; margin:20px 0 0 0; padding:0}
+    .course-content .r-col .page-tools, .courses-content .r-col .page-tools {left:auto; top:auto; position:relative}
+    .r-col .page-tools .pt-links {float:none; margin:0}
+    .courses-content .courses-descr {width:auto}
+    .courses-content .l-col ol, .courses-content .l-col ul {margin-left:0}
+    .course-manager .manager-popup {left:0}
+
+    .page-course .courses-content .events-table-2 {width:auto}
+    .related-events .distance-course-length {margin:0 0 20px 0}
+    .courses-list tr {display:block; padding:10px 0 20px 0; border-top:1px solid #e5e5e5}
+    .courses-list tr.first+tr {border-top:none}
+    .courses-list td {padding:10px 0 0 0; border-bottom:none}
+    .courses-list .name {width:auto}
+    .courses-list .date {width:auto}
+    .courses-list .address {width:auto}
+
+    .mobile-menu-link {display:block; float:right; margin:23px 0 0 0}
+    .mobile-menu-link svg:nth-child(1) {display:block; fill:none; stroke:#000; width:34px; height:34px}
+    .mobile-menu-link svg:nth-child(2) {display:none}
+    .mobile-menu-open .mobile-menu-link {margin:0; width:34px; height:80px; position:relative}
+    .mobile-menu-open .mobile-menu-link svg:nth-child(1) {display:none}
+    .mobile-menu-open .mobile-menu-link svg:nth-child(2) {display:block; fill:none; stroke:#000; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
+
+    .mobile-menu-open,
+    .mobile-menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+}

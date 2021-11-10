@@ -50,19 +50,19 @@ $(document).ready(function () {
   });
 
   handleReviews();
-  
+
   $(".course-descr-finished .signup").click(function() {
     return false;
   });
-  
+
   if ($(".course-gallery").length) {
     $(".course-gallery").courseGallery();
   }
-  
-  
+
+
 
   if (0) {
-    
+
     //Thumbnailer.config.shaderOpacity = 1;
     var $course_gallery_1 = $('#course_gallery_1 .gallery').tn3({
       responsive: false,
@@ -76,34 +76,34 @@ $(document).ready(function () {
         overMove: false
       }
     }).data('tn3');
-    
+
     $course_gallery_1.resize($(window).width(),$(window).height() - 200);
-    
+
     $(window).resize(function() {
       $course_gallery_1.resize($(window).width(),$(window).height() - 200);
     })
-    
+
     $(".course-gallery a").click(function() {
-      
+
       var galId = $(this).parents(".course-gallery").attr("rel");
-      
+
       var gal = $("#"+galId);
-      
+
       gal.show($(this).prevAll("a").length);
       gal.css({
         left: 0,
       }).hide().fadeIn(150);
-      
-      
+
+
       return false;
     });
-    
+
     $(".gallery-close").on("click",function() {
       $(".gallery-popup").fadeOut(150,function() {
         $(".gallery-popup").css("left",-20000);
       });
     });
-    
+
     jQuery(document).keydown(function(e){
       if (e == null) { // ie
         keycode = event.keyCode;
@@ -118,14 +118,14 @@ $(document).ready(function () {
           $(".gallery-popup").css("left",-20000);
         });
       }
-      
+
     });
-    
-    
+
+
   }
-  
+
   if (0) {
-    
+
     //Thumbnailer.config.shaderOpacity = 1;
     var $course_gallery_2 = $('#course_gallery_2 .gallery').tn3({
       responsive: false,
@@ -139,34 +139,34 @@ $(document).ready(function () {
         overMove: false
       }
     }).data('tn3');
-    
+
     $course_gallery_2.resize($(window).width(),$(window).height() - 200);
-    
+
     $(window).resize(function() {
       $course_gallery_2.resize($(window).width(),$(window).height() - 200);
     })
-    
+
     $(".course-gallery a").click(function() {
-      
+
       var galId = $(this).parents(".course-gallery").attr("rel");
-      
+
       var gal = $("#"+galId);
-      
+
       gal.css({
         left: 0,
       }).hide().fadeIn(150);
-      
+
       gal.find(".tn3-thumbs li").eq($(this).prevAll("a").length).click();
-      
+
       return false;
     });
-    
+
     $(".gallery-close").on("click",function() {
       $(".gallery-popup").fadeOut(150,function() {
         $(".gallery-popup").css("left",-20000);
       });
     });
-    
+
     jQuery(document).keydown(function(e){
       if (e == null) { // ie
         keycode = event.keyCode;
@@ -181,10 +181,10 @@ $(document).ready(function () {
           $(".gallery-popup").css("left",-20000);
         });
       }
-      
+
     });
-    
-    
+
+
   }
 
   if ($("input:radio").length) {
@@ -197,11 +197,11 @@ $(document).ready(function () {
   });
 
   // City selector
-  
+
   citySelector();
 
 	// Center - Load more photos
-	
+
 	$('.more-photos').bind('click', function(e){
 		e.preventDefault();
 		more_link = $(this);
@@ -220,7 +220,7 @@ $(document).ready(function () {
 				more_link.parent().parent().append(msg);
 				more_link.parent().remove();
 			}
-		})		
+		})
 	})
 
 	makeup();
@@ -290,7 +290,7 @@ $(document).ready(function () {
 	})
 
 	$(".common-form select").customSelect();
-  
+
   if ($(".upcoming-filter").length) {
     $(".upcoming-filter select").customSelect();
   }
@@ -312,11 +312,11 @@ $(document).ready(function () {
 	});
 
 	validateForms();
-	
+
 	// custom input
 
 	if ($(".common-form input:file").length) {
-		$(".common-form input:file").nicefileinput({ 
+		$(".common-form input:file").nicefileinput({
 			label : 'Выбрать файл'
 		});
 	}
@@ -353,7 +353,7 @@ $(document).ready(function () {
 		});
 
 	}
-	
+
 	$(".hint .close").click(function() {
 		$(this).parents(".hint").slideUp(150)
 	});
@@ -524,7 +524,7 @@ $(document).ready(function () {
 			}
 		})
 	})
-	
+
 	$('.allcourses-main').change( function() {
 		allcourses_div = $(this).next();
 		allcourses_div.html('');
@@ -544,7 +544,7 @@ $(document).ready(function () {
 			}
 		})
 	} );
-	
+
 	$('.allseminars-main').change( function() {
 		allcourses_div = $(this).next();
 		allcourses_div.html('');
@@ -564,7 +564,7 @@ $(document).ready(function () {
 			}
 		})
 	} );
-	
+
 
 
 });
@@ -575,17 +575,17 @@ $(document).ready(function () {
     var selects = $(this);
     selects.each(function () {
       var select = $(this);
-      
+
       if (!$(this).next(".param-selector").length) {
         select.css("visibility","hidden").css("position","absolute").css("z-index","-1");
         select.after("<div class='param-selector' id='" + select.attr("id") + "-selector'>");
         var selector = select.next(".param-selector");
-        
+
         if (select.is(":disabled")) {
           selector.addClass("selector-disabled")
         }
-        
-        
+
+
         selector.append("<div class='param-sel' />").append("<div class='dropdown' />");
         var dropdown = selector.find(".dropdown");
         // dropdown.append("<div class='top-border' />");
@@ -593,7 +593,7 @@ $(document).ready(function () {
         paramSel.addClass("initial");
         paramSel.append("<div class='arr' />");
         paramSel.append("<div class='sel-value' />");
-        
+
         if (select.find("option[value=" + select.val() + "]").attr("flag")) {
           paramSel.find(".sel-value").html("<img src='" + select.find("option[value=" + select.val() + "]").attr("flag") + "' />" + select.find("option[value=" + select.val() + "]").html());
         } else {
@@ -603,16 +603,16 @@ $(document).ready(function () {
             paramSel.find(".sel-value").html(select.find("option[value=" + select.val() + "]").html());
           }
         }
-        
+
         select.find("option").each(function () {
           if ($(this).attr("flag")) {
             var flag = "<img src=" + $(this).attr("flag") + " />";
           } else {
             flag = "";
           }
-          
+
           if (select.find("option").length > 2) {
-          
+
             if ($(this).val() != select.val() /* || select.attr("ttl")*/) {
               if (select.parents().hasClass("reviews-filter")) {
                 dropdown.append("<div val='" + $(this).attr("value") + "'><span>" + flag + $(this).html() + "</span></div>");
@@ -626,7 +626,7 @@ $(document).ready(function () {
                 dropdown.append("<div style='display:none' val='" + $(this).attr("value") + "'>" + flag + $(this).html() + "</div>");
               }
             }
-            
+
           } else {
             if (select.parents().hasClass("reviews-filter")) {
               dropdown.append("<div val='" + $(this).attr("value") + "'><span>" + flag + $(this).html() + "</span></div>");
@@ -634,10 +634,10 @@ $(document).ready(function () {
               dropdown.append("<div val='" + $(this).attr("value") + "'>" + flag + $(this).html() + "</div>");
             }
           }
-          
+
         });
-      
-      
+
+
         paramSel.on("click",function() {
           $(this).parents(".common-form").find(".form-item").css("z-index",1);
           $(this).parents(".form-item").css("z-index",10);
@@ -648,11 +648,11 @@ $(document).ready(function () {
               dropdown.fadeIn(150);
               selector.addClass("param-open");
               var maxWidth = 0;
-              
+
               $(this).parents(".form-item").prevAll(".form-item").css("z-index","100");
               $(this).parents(".form-item").css("z-index","1000");
               $(this).parents(".form-item").nextAll(".form-item").css("z-index","100");
-              
+
               dropdown.find("div").each(function () {
                 if ($(this).width() >= maxWidth) {
                   maxWidth = $(this).width();
@@ -661,25 +661,25 @@ $(document).ready(function () {
                   maxWidth = paramSel.width() + 1;
                 }
               });
-              
+
               //paramSel.css("width", maxWidth + "px");
               // dropdown.find("div").css("width", maxWidth + "px");
               // dropdown.css("width", maxWidth);
-              
+
               // ddOverflow = $("html").height() - (dropdown.offset().top + dropdown.height());
               // if (ddOverflow < 0) {
                 // dropdown.css("margin-top", -30 - dropdown.height());
               // }
-              
+
               //dropdown.css("top",paramSel.position().top + paramSel.height());
-              
+
             } else {
               dropdown.fadeOut(150);
               selector.removeClass("param-open");
             }
           }
         });
-        
+
         dropdown.find("div").on("click",function () {
           selector.removeClass("param-sel-error");
           paramSel.removeClass("initial");
@@ -702,10 +702,10 @@ $(document).ready(function () {
             selector.parents(".form-item").find(".error-wrapper").remove();
           }
         });
-      
+
       }
     });
-    
+
   };
 })( jQuery );
 
@@ -920,7 +920,7 @@ function calendarFirstInCallback(carousel, item, idx, state) {
 	}
 
 };
-	
+
 function calendarLastInCallback(carousel, item, idx, state) {
 	carousel.list.find("li").removeClass("next").removeClass("prev");
 	carousel.list.find("li[jcarouselindex='"+parseInt(idx+1)+"']").addClass("next");
@@ -992,11 +992,11 @@ function validateForms() {
 		},
 		invalidHandler: function(form, validatorPersonal) {
 			var errors = validatorPersonal.numberOfInvalids();
-			if (errors) {                    
+			if (errors) {
 
 				validatorPersonal.errorList[0].element.focus();
 			}
-		} 
+		}
 
 
 	});
@@ -1035,11 +1035,11 @@ function validateForms() {
 		},
 		invalidHandler: function(form, validatorfeedback) {
 		var errors = validatorfeedback.numberOfInvalids();
-			if (errors) {                    
+			if (errors) {
 
 				validatorfeedback.errorList[0].element.focus();
 			}
-		} 
+		}
 
 
 	});
@@ -1067,7 +1067,7 @@ function openPopup(pupId) {
 
 	if (!popup.children(".popup-shadow").length) {
 		popup.append("<div class='popup-shadow' />");
-	} 
+	}
 
 
 
@@ -1112,40 +1112,40 @@ function citySelector() {
     var csPopup = $(".city-selector");
     var csItems = csPopup.find(".cs-item");
     var cityTrigger = $(".city-trigger");
-    
-    
+
+
     csItems.filter("[cityid="+ cityTrigger.attr("curcity") +"]").addClass("selected");
-    
+
     cityTrigger.click(function() {
       $(this).toggleClass("city-trigger-act");
-      
+
       csPopup.fadeToggle(150);
-      
+
     });
-    
+
     csItems.click(function() {
       var th = $(this);
-      
+
       cityTrigger.html($(this).find(".city-name").html());
-      
+
       $(".header .contacts-address .address-text").html($(this).find(".address-html").html())
       $(".header-phone .phone").html($(this).find(".city-phone").html())
-      
+
       cityTrigger.removeClass("city-trigger-act");
-      
+
       csPopup.fadeOut(150,function() {
         csItems.removeClass("selected");
         th.addClass("selected");
       });
-      
+
     })
-    
+
   }
 }
 
 function handleReviews() {
   if ($(".course-reviews").length) {
-    
+
     if ($(".course-reviews").hasClass("reviews-wide")) {
       var cHeight = 126;
       var dHeight = 314;
@@ -1153,13 +1153,13 @@ function handleReviews() {
       var cHeight = 200;
       var dHeight = 332;
     }
-  
+
     $(".course-reviews-item .text-cont").each(function() {
       if ($(this).height() > cHeight) {
         $(this).parents(".course-reviews-item").find(".expand-trigger span").show();
       }
     });
-    
+
     $(".course-reviews .expand-trigger span").click(function() {
       if (!$(this).hasClass("expanded")) {
         $(this).parents(".course-reviews-item").addClass("review-expanded");
@@ -1183,34 +1183,34 @@ function handleReviews() {
         });
       }
     });
-    
+
   }
 }
 
 (function( $ ) {
   $.fn.courseGallery = function() {
-    
+
     $(this).each(function() {
       var galList = $(this);
-      
+
       var galLinks = galList.children("a");
-      
+
       var galId = galList.attr("rel");
-      
+
       var $galPopup = $("<div id='"+galId+"' class='gallery-popup'>");
-      
+
       $("body").append($galPopup);
-      
+
       $galPopup.append('<div class="gallery-close"></div>');
       $galPopup.append('<div class="gallery"><div class="tn3 album"><ol></ol></div>');
-      
+
       var $tn3Gallery = $galPopup.find(".gallery");
       var $tn3List = $galPopup.find("ol");
-      
+
       galLinks.each(function() {
         $tn3List.append('<li><h4>'+$(this).find(".descr").html()+'</h4><div class="tn3 description"></div><a href="'+$(this).attr("hires")+'"><img src="'+$(this).children("img").attr("src")+'"/></a></li>');
       });
-      
+
       var $courseGal = $tn3Gallery.tn3({
         responsive: false,
         imageClick:"fullscreen",
@@ -1223,22 +1223,22 @@ function handleReviews() {
           overMove: false
         }
       }).data('tn3');
-      
+
       $courseGal.resize($(window).width(),$(window).height() - 200);
-      
+
       $(window).resize(function() {
         $courseGal.resize($(window).width(),$(window).height() - 200);
       })
-      
+
       $(".course-gallery a").click(function() {
-      
+
         var $th = $(this);
-        
+
         var galId = $(this).parents(".course-gallery").attr("rel");
-        
+
         var gal = $("#"+galId);
-        
-        
+
+
         gal.css({
           left: 0,
           opacity:.1
@@ -1247,16 +1247,16 @@ function handleReviews() {
         },150);
 
         $courseGal.show($th.prevAll("a").length);
-        
+
         return false;
       });
-      
+
       $(".gallery-close").on("click",function() {
         $(".gallery-popup").fadeOut(150,function() {
           $(".gallery-popup").css("left",-20000);
         });
       });
-      
+
       jQuery(document).keydown(function(e){
         if (e == null) { // ie
           keycode = event.keyCode;
@@ -1269,24 +1269,24 @@ function handleReviews() {
             $(".gallery-popup").css("left",-20000);
           });
         }
-        
+
       });
-      
-      
+
+
     });
-    
+
   };
 })( jQuery );
 
 (function( $ ) {
   $.fn.courseProgram = function() {
-    
+
     $(this).each(function() {
-      
+
       var programCont = $(this);
-      
+
       var $itemTtl = $(this).find("h3");
-      
+
       $itemTtl.each(function() {
         $(this).addClass("cp-item-ttl");
         var $itemDescr = $(this).next("div").first();
@@ -1298,9 +1298,9 @@ function handleReviews() {
           $(this).toggleClass("item-ttl-act");
         });
       });
-      
+
     });
-    
+
   };
 })( jQuery );
 
@@ -1368,4 +1368,44 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+});
+
+$(document).ready(function() {
+    $('.page-text table, .courses-list').each(function() {
+        var curTable = $(this);
+        curTable.addClass('table-mobile');
+        curTable.find('tr.first th').each(function() {
+            var curTH = $(this);
+            var curIndex = curTable.find('tr.first th').index(curTH);
+            curTable.find('tr:not(.first)').each(function() {
+                $(this).find('td').eq(curIndex).prepend('<div class="td-mobile-title">' + curTH.html() + '</div>');
+            });
+        });
+    });
+
+    $('.header-top .center-wrapper').append('<a href="#" class="mobile-menu-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34" id="mobile-menu-link"><path d="M4.25 18.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 8.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 28.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
+
+    $('.mobile-menu-link').click(function(e) {
+        if ($('html').hasClass('mobile-menu-open')) {
+            $('html').removeClass('mobile-menu-open');
+            $('.wrapper').css('margin-top', 0);
+            $(window).scrollTop($('html').data('scrollTop'));
+        } else {
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('mobile-menu-open');
+            $('html').data('scrollTop', curScroll);
+            $('.wrapper').css('margin-top', -curScroll);
+        }
+        e.preventDefault();
+    });
+
+});
+
+$(window).on('load resize scroll', function() {
+    var windowScroll = $(window).scrollTop();
+    if (windowScroll > 0) {
+        $('.header').addClass('fixed');
+    } else {
+        $('.header').removeClass('fixed');
+    }
 });
