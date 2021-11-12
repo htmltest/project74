@@ -1371,7 +1371,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('.page-text table, .courses-list').each(function() {
+    $('.page-text table, .courses-list, .course-schedule, .events-table-3').each(function() {
         var curTable = $(this);
         curTable.addClass('table-mobile');
         curTable.find('tr.first th').each(function() {
@@ -1383,7 +1383,20 @@ $(document).ready(function() {
         });
     });
 
-    $('.header-top .center-wrapper').append('<a href="#" class="mobile-menu-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34" id="mobile-menu-link"><path d="M4.25 18.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 8.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 28.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
+    $('.coupons-list').each(function() {
+        var curTable = $(this);
+        curTable.find('.coupons-list-header').each(function() {
+            var curTH = $(this);
+            var curIndex = curTable.find('.coupons-list-header').index(curTH);
+            curTable.find('.coupons-item').each(function() {
+                $(this).find('.coupons-item-col').eq(curIndex).prepend('<div class="td-mobile-title">' + curTH.html() + '</div>');
+            });
+        });
+    });
+
+    $('.header-top .center-wrapper').prepend('<a href="#" class="mobile-menu-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34" id="mobile-menu-link"><path d="M4.25 18.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 8.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 28.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
+    $('.header-top .center-wrapper').append('<a href="#" class="mobile-search-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26"><path d="M11.5227 19.7955C16.0916 19.7955 19.7955 16.0916 19.7955 11.5227C19.7955 6.95383 16.0916 3.25 11.5227 3.25C6.95383 3.25 3.25 6.95383 3.25 11.5227C3.25 16.0916 6.95383 19.7955 11.5227 19.7955Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.7647 22.7647L18.0375 18.0375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
+    $('.r-col').before('<div class="r-col-title-mobile"><a href="#">Дополнительная информация</a></div>');
 
     $('.mobile-menu-link').click(function(e) {
         if ($('html').hasClass('mobile-menu-open')) {
@@ -1397,6 +1410,54 @@ $(document).ready(function() {
             $('.wrapper').css('margin-top', -curScroll);
         }
         e.preventDefault();
+    });
+
+    $('.mobile-search-link').click(function(e) {
+        if ($('html').hasClass('mobile-search-open')) {
+            $('html').removeClass('mobile-search-open');
+            $('.wrapper').css('margin-top', 0);
+            $(window).scrollTop($('html').data('scrollTop'));
+        } else {
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('mobile-search-open');
+            $('html').data('scrollTop', curScroll);
+            $('.wrapper').css('margin-top', -curScroll);
+        }
+        e.preventDefault();
+    });
+
+    $('.header').append('<div class="header-mobile-contacts">' + $('.header-phone').html() + '</div>');
+    $('.header-mobile-contacts').prepend('<div class="header-mobile-social">' + $('.footer-sn-links').html() + '</div>');
+    $('.header-mobile-contacts .phone').prepend('<div class="header-mobile-contacts-mobile-title">Телефон</div>');
+    $('.header-mobile-contacts .contacts-address').prepend('<div class="header-mobile-contacts-mobile-title">Адрес</div>');
+    $('.header-mobile-contacts .contacts-address strong').before('<div class="header-mobile-contacts-mobile-title">Режим работы</div>');
+
+    $('.tabbed-content').each(function() {
+        var curTabbed = $(this);
+        curTabbed.find('> .tabs-content > .tab-content').each(function() {
+            var curTabContent = $(this);
+            var curIndex = curTabbed.find('> .tabs-content > .tab-content').index(curTabContent);
+            curTabContent.prepend('<div class="tab-content-mobile-title">' + curTabbed.find('> .tabs > .tab').eq(curIndex).html().replace('<br>', ' ') + '</div>');
+        });
+    });
+
+    $('.tab-content-mobile-title').click(function() {
+        $(this).parent().toggleClass('open');
+    });
+
+    $('.main-menu span.arr').click(function() {
+        $(this).parent().parent().toggleClass('open');
+        $('.main-menu').toggleClass('open');
+    });
+
+    $('.r-col-title-mobile a').click(function(e) {
+        $('.r-col-title-mobile').toggleClass('open');
+        $('.r-col').toggleClass('visible');
+        e.preventDefault();
+    });
+
+    $('.footer h5').click(function() {
+        $(this).parent().toggleClass('open');
     });
 
 });

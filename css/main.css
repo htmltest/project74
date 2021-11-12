@@ -1573,6 +1573,10 @@ display: block;
 
 .td-mobile-title {display:none}
 .mobile-menu-link {display:none}
+.mobile-search-link {display:none}
+.tab-content-mobile-title {display:none}
+.header-mobile-contacts {display:none}
+.r-col-title-mobile {display:none}
 
 @media screen and (max-width:1019px) {
     body, html {min-width:0; height:auto}
@@ -1587,22 +1591,62 @@ display: block;
     .header-top {height:80px}
     .header .logo {margin:14px 0 0 0}
     .header .logo img {width:100px}
-    
+
     .mobile-menu-open .header {height:auto; bottom:0; overflow:auto}
 
     .center-wrapper {width:auto}
 
     .header-phone {display:none}
-    .header-controls {display:none}
+    .header .header-controls {margin:0; font-size:0; line-height:0; letter-spacing:-1px; margin:29px 20px 0 0}
+    .mobile-search-open .header .header-controls {display:none}
     .header-search {display:none}
+    .mobile-search-link {display:block; float:right; margin:27px 20px 0 0}
+    .mobile-menu-open .mobile-search-link {display:none}
+    .mobile-search-link svg {display:block; width:26px; height:26px; fill:none; stroke:#006351}
+    .mobile-search-link svg:nth-child(2) {display:none}
+    .mobile-search-open .mobile-search-link {margin:0; width:34px; height:80px; position:relative}
+    .mobile-search-open .mobile-search-link svg:nth-child(1) {display:none}
+    .mobile-search-open .mobile-search-link svg:nth-child(2) {display:block; fill:none; stroke:#006351; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
 
-    .main-menu {display:none}
+    .mobile-search-open .header-search {display:block; width:auto; left:20px; bottom:-10px}
+    .header-search .form-text {width:100%; background:none; height:44px; font-size:16px; line-height:24px; padding:8px 20px; border:2px solid #006351; box-sizing:border-box}
+    .header-search .placeholder {font-size:16px; line-height:44px}
+    .header-search .form-submit {width:26px; height:26px; right:5px; top:8px; background:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26"><path fill="none" stroke="rgba(0, 99, 81, 1)" d="M11.5227 19.7955C16.0916 19.7955 19.7955 16.0916 19.7955 11.5227C19.7955 6.95383 16.0916 3.25 11.5227 3.25C6.95383 3.25 3.25 6.95383 3.25 11.5227C3.25 16.0916 6.95383 19.7955 11.5227 19.7955Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="rgba(0, 99, 81, 1)" d="M22.7647 22.7647L18.0375 18.0375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>')}
+
+    .mobile-search-open .header {height:auto; bottom:0; overflow:auto}
+
+    .mobile-search-open,
+    .mobile-search-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+    .mobile-menu-open .header-mobile-contacts {display:block; padding:20px}
+    .header-mobile-contacts .contacts-links {display:none}
+    .header-mobile-contacts .phone {font-weight:normal; font-size:18px; line-height:27px}
+    .header-mobile-contacts .contacts-address {font-size:18px; line-height:27px}
+    .header-mobile-contacts .city-trigger {font-weight:normal; background:none; color:#000}
+    .header-mobile-contacts .contacts-address strong {font-weight:normal; background:none; color:#000}
+
+    .main-menu {display:none; background:none}
     .mobile-menu-open .main-menu {display:block}
-    .main-menu ul {margin-left:0}
-    .main-menu ul li {float:none; margin:0; background:none}
+    .main-menu ul {margin-left:0; border-top:1px solid #dcdcdc}
+    .main-menu ul li {float:none; margin:0; background:none !important; border-bottom:1px solid #dcdcdc}
     .main-menu ul li .link {display:block}
-    .main-menu ul li a {display:block; padding-left:0; float:none}
-    .main-menu .submenu {position:relative; left:auto; top:auto; margin:0; min-width:0}
+    .main-menu ul li a {display:block; padding-left:0; float:none; color:#006351 !important; background:none !important; padding:20px 0; font-size:18px; line-height:27px}
+    .main-menu ul li span.arr {width:19px; height:20px; top:33px; margin:-10px 0 0 0; background:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 24"><path d="M22.0607 13.0607C22.6464 12.4749 22.6464 11.5251 22.0607 10.9393L12.5147 1.3934C11.9289 0.807609 10.9792 0.80761 10.3934 1.3934C9.80761 1.97918 9.80761 2.92893 10.3934 3.51472L18.8787 12L10.3934 20.4853C9.80761 21.0711 9.80761 22.0208 10.3934 22.6066C10.9792 23.1924 11.9289 23.1924 12.5147 22.6066L22.0607 13.0607ZM2.62268e-07 13.5L21 13.5L21 10.5L-2.62268e-07 10.5L2.62268e-07 13.5Z" fill="rgba(185, 185, 185, 1)"/></svg>'); background-size:100% 100%}
+    .main-menu ul li span.arr img {display:none}
+    .main-menu ul li.open span.arr {right:auto; left:0; transform:rotate(-180deg)}
+    .main-menu ul li.open .link a {padding-left:40px}
+    .main-menu .submenu {position:relative; left:auto; top:auto; margin:0; min-width:0; background:none}
+    .main-menu ul li.open .submenu a {padding-left:0; font-weight:normal}
+    .main-menu .submenu li a {border:none; background:none}
+    .main-menu .submenu li a:hover {border:none; background:none; top:auto; margin:0}
+
+    .main-menu li a:hover {background:none}
+    .main-menu.open ul li {display:none}
+    .main-menu.open ul li.open {display:block}
+    .main-menu .submenu {display:none !important}
+    .main-menu li.open .submenu {display:block !important; opacity:1 !important}
+    .main-menu.open ul li.open li {display:block}
+    .main-menu .submenu li {background:none}
 
     .mainpage-events {min-width:0}
 
@@ -1631,7 +1675,7 @@ display: block;
     .calendar-month-next {z-index:7}
     .calendar-week-day {width:14.28%; box-sizing:border-box}
     .calendar-day {width:14.28%; box-sizing:border-box}
-    .calendar-day-announce {right:10px}
+    .calendar-day-announce {right:20px}
     .calendar-day-announce-item {width:100%; box-sizing:border-box; padding:0; background:none}
 
     .partners-carousel .jcarousel-clip {width:100%}
@@ -1666,7 +1710,7 @@ display: block;
     .mainpage-partners {padding-left:20px; padding-right:20px}
 
     .post-comments .comment-body {padding-right:0; padding-bottom:50px}
-    .post-comments .reply-button {display:block; bottom:0; left:10px}
+    .post-comments .reply-button {display:block; bottom:0; left:20px}
     .post-comments .reply-button span {left:auto; top:auto}
     .post-comments .author {position:relative; right:auto; top:auto; width:auto}
     .post-comments .comment-body:hover {background:none; padding-left:14px !important; margin-left:-9px !important}
@@ -1750,9 +1794,9 @@ display: block;
     .center-photos-r {float:none; width:auto}
 
     .l-col {float:none; width:auto; margin:0; padding:0}
-    .r-col {float:none; width:auto; margin:20px 0 0 0; padding:0}
-    .course-content .r-col .page-tools, .courses-content .r-col .page-tools {left:auto; top:auto; position:relative}
-    .r-col .page-tools .pt-links {float:none; margin:0}
+    .r-col {display:none; float:none; width:auto; margin:20px 0; padding:0 !important}
+    .r-col.visible {display:block}
+    .page-tools {display:none}
     .courses-content .courses-descr {width:auto}
     .courses-content .l-col ol, .courses-content .l-col ul {margin-left:0}
     .course-manager .manager-popup {left:0}
@@ -1767,12 +1811,187 @@ display: block;
     .courses-list .address {width:auto}
 
     .mobile-menu-link {display:block; float:right; margin:23px 0 0 0}
-    .mobile-menu-link svg:nth-child(1) {display:block; fill:none; stroke:#000; width:34px; height:34px}
+    .mobile-search-open .header .mobile-menu-link {display:none}
+    .mobile-menu-link svg:nth-child(1) {display:block; fill:none; stroke:#006351; width:34px; height:34px}
     .mobile-menu-link svg:nth-child(2) {display:none}
     .mobile-menu-open .mobile-menu-link {margin:0; width:34px; height:80px; position:relative}
     .mobile-menu-open .mobile-menu-link svg:nth-child(1) {display:none}
-    .mobile-menu-open .mobile-menu-link svg:nth-child(2) {display:block; fill:none; stroke:#000; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
+    .mobile-menu-open .mobile-menu-link svg:nth-child(2) {display:block; fill:none; stroke:#006351; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
 
     .mobile-menu-open,
     .mobile-menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+    .tabs {display:none}
+    .tab-content {display:block !important}
+    .tab-content > * {display:none !important}
+    .tab-content.open > * {display:block !important}
+    .tab-content-mobile-title {background:#006351; padding:6px 20px; color:#fff; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
+    .tab-content .tab-content .tab-content-mobile-title {margin-left:20px}
+    .tab-content-mobile-title::after {content:""; display:block; width:24px; height:24px; position:absolute; right:6px; top:18px; background:url(../images/menu-arr.png) no-repeat}
+    .tab-content.open > .tab-content-mobile-title::after {transform:rotate(-180deg); top:16px}
+    .tab-content .upcoming-filter {margin:0 -20px}
+    .tab-content > .tab-content-mobile-title {display:block !important}
+    .tab-content.open > .tab-content-mobile-title {margin-bottom:20px}
+    .common-tabs-2 .tab-content {margin-top:10px; margin-bottom:10px}
+    .common-tabs .tab-content {margin-top:10px}
+
+    .mainpage-events .prev {left:-80px; background-position:35px center}
+    .mainpage-events .next {right:-80px; background-position:-164px center}
+    .events-carousel .descr {height:auto}
+
+    .block-news .news .title-n {width:auto}
+
+    .calendar-byweek .calendar-week {display:none}
+    .calendar-day-byweek {width:auto; float:none}
+    .calendar-byweek .calendar-monthes {position:relative; top:auto; left:auto; right:auto}
+
+    .paginator {float:none}
+
+    .reviews-filter .ttl {float:none}
+    .reviews-filter .rf-form {float:none}
+
+    .course-reviews-item .text {height:auto}
+    .reviews-wide .course-reviews-item .descr .cont {height:auto}
+    .reviews-wide .course-reviews-item .descr {height:auto}
+    .reviews-wide .course-reviews-item {height:auto}
+    .course-reviews-item .expand-trigger {display:none}
+
+    .center-map {margin:0}
+    .center-map-descr {position:relative; left:auto; top:auto; width:auto}
+
+    .dl-program {float:none; position:relative; overflow:hidden; margin:0}
+    .courses-content .l-col ol, .courses-content .l-col ul {margin-left:20px}
+    .course-program .cp-item .descr {font-size:16px; line-height:24px}
+
+    .course-schedule tr {padding:20px 0; border-top:1px solid #e5e5e5}
+    .course-schedule tr.first+tr {border-top:none}
+    .course-schedule td {padding:0}
+
+    .course-reviews-item {width:auto; float:none; height:auto}
+    .more-reviews {text-align:center}
+
+    .upcoming-courses .upcoming-courses-item {float:none; width:auto}
+    .upcoming-courses .ttl {height:auto}
+    .upcoming-courses .prices {font-size:30px}
+
+    .courses-tabs .course-program {margin:0}
+
+    .course-descr-l {float:none; width:auto}
+    .course-descr-r {float:none; width:auto}
+    .course-descr .price-content {width:auto}
+    .course-descr .events-payments {position:relative; left:auto; bottom:auto}
+
+    .course-details {display:block}
+    .course-details tr {display:block; margin:20px 0 0 0}
+    .course-details td {display:block; width:auto; padding:0}
+
+    .course-program .cp-item-descr {font-size:16px}
+    .course-reviews-item .descr {width:auto; height:auto}
+
+    .seminars-table {width:auto; margin:0; display:block}
+    .seminars-table tr {display:block; padding:10px 0 20px 0; border-top:1px solid #e5e5e5}
+    .seminars-table tr:first-child {border-top:none}
+    .seminars-table td {padding:10px 0 0 0; border-bottom:none; display:block}
+    .seminars-table .name {width:auto}
+    .seminars-table .price-content {width:auto}
+    .seminars-table .price-1 {float:none; display:inline-block; vertical-align:top}
+    .seminars-table .price-2 {float:none; display:inline-block; vertical-align:top}
+
+    .order-course-info-col {float:none; margin:0}
+    .order-course-info-option,
+    .events-table-3-order .order-course-info-option {float:none; width:auto; padding:0; margin:10px 0 0 0}
+    .order-course-info-coupon {float:none; width:auto; padding:0; margin:10px 0 0 0}
+    .events-table-3 .common-form .form-text {width:100%}
+    .events-table-3-order .form-submit {margin-left:0; width:100%}
+    .NFI-button {float:none !important; margin:0 !important}
+
+    .order-success-code {position:relative; right:auto; top:auto; width:auto}
+    .order-data-name {float:none; width:auto}
+    .order-data-value {margin:0}
+
+    .events-table-3 {margin:0}
+    .events-table-3 .remove {width:auto; text-align:right}
+    .events-table-3 td {border-bottom:none}
+    .events-table-3 .remove .td-mobile-title {display:none}
+    .events-table-3 .remove-event {display:inline-block}
+    .events-table-3 .name {width:auto}
+    .events-table-3 .option {width:auto}
+    .events-form {width:auto}
+    .common-form .add-field {margin-left:0}
+
+    .coupons-filter-field-1 {float:none; width:auto}
+    .coupons-filter-field-2 {float:none; width:auto; margin:10px 0 0 0}
+    .coupons-filter-field-3 {float:none; width:auto; margin:10px 0 0 0}
+    .coupons-filter-checkbox {float:none; width:auto; margin:10px 0 0 0}
+
+    .coupons-list-headers {display:none}
+    .coupons-item {margin:20px 0; padding:0 20px}
+    .coupons-item-col {float:none; margin:10px 0 0 0}
+    .coupons-item-col-1 {padding:0; width:auto}
+    .coupons-item-col-2 {padding:0; width:auto; text-align:left}
+    .coupons-item-col-3 {padding:0; width:auto}
+    .coupons-item-col-4 {padding:0; width:auto}
+    .coupons-item-col-5 {padding:0; width:auto}
+    .coupons-item-col-6 {padding:0; width:auto}
+
+    .coupons-item-window {position:fixed; left:20px; right:20px; width:auto; top:50%; transform:translateY(-50%)}
+
+    .video-item {width:100%}
+    .video-single-content {float:none; width:auto}
+    .video-single-player iframe {width:100%; max-width:100%}
+    .video-single-side {float:none; width:auto}
+
+    .calendar-page-tools {width:auto; height:auto}
+
+    .search-404 {float:none; width:auto}
+    .search-404 .form-item {float:none}
+    .search-404 .form-text {width:100%; box-sizing:border-box}
+    .content-404 h1 span {display:block}
+
+    .course-program {margin-left:0}
+
+    .r-col-title-mobile {display:block; font-weight:bold; margin:20px 0; font-size:20px; line-height:30px}
+    .r-col-title-mobile a {text-decoration:none; display:block; background:#006351; padding:6px 20px; color:#fff; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
+    .r-col-title-mobile a::after {content:""; display:block; width:24px; height:24px; position:absolute; right:6px; top:18px; background:url(../images/menu-arr.png) no-repeat}
+    .r-col-title-mobile.open a::after {transform:rotate(-180deg); top:16px}
+
+    .footer {font-size:16px; line-height:24px}
+    .footer-copy {font-size:18px; line-height:27px}
+    .footer-contacts dt {width:100px}
+    .footer-col-3 {padding:0}
+    .footer-col-4 {margin:0}
+    .footer h5 {font-size:18px; line-height:27px; cursor:pointer; position:relative; border-top:1px solid #e1e1e1; padding:20px 0; margin:0}
+    .footer h5::after {content:""; display:block; width:36px; height:36px; background:url('data:image/svg+xml,<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 13.5186L18 22.5186L27 13.5186" stroke="rgba(0, 99, 81, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>'); position:absolute; right:0; top:15px}
+    .footer .open h5::after {transform:rotate(-180deg)}
+    .footer-menu {display:none}
+    .open .footer-menu {display:block}
+    .footer-sn-links {display:none}
+    .open .footer-sn-links {display:block}
+    .footer-bottom {border-top:1px solid #e1e1e1; margin:0; font-size:16px; line-height:24px}
+
+    .mp-education-item, .mp-education-item:visited {height:auto; padding-bottom:0; margin-bottom:20px}
+    .mainpage-education .ico {top:50%; margin-top:-21px}
+
+    .mainpage-upcoming-events .events-table td {font-size:16px; line-height:24px}
+    .mainpage-upcoming-events .events-table .name {font-size:20px; line-height:28px}
+    .mainpage-upcoming-events .events-table .date {font-size:16px; line-height:24px}
+    .mainpage-upcoming-events .events-table .form {font-size:16px}
+    .events-payments {font-size:16px; line-height:24px}
+    .courses-tabs .page-text {font-family:"PT Sans", sans-serif}
+    .page-text {font-size:16px; line-height:24px}
+    .page-text ul li {background-position:left 0.4em}
+    .courses-content .l-col ul > li {background-position:left 0.4em}
+    .center-wrapper {padding:0 20px}
+
+    .tab-content.open {margin-bottom:40px; padding-bottom:0}
+
+    .header-mobile-social {text-align:left; font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 30px 0}
+    .header-mobile-social a {display:inline-block; vertical-align:top; margin:0 20px 0 0}
+    .header-mobile-social .ico {width:23px; height:23px; display:block; transform:scale(1.25); transform-origin:left top}
+    .header-mobile-social .ico-fb {background-position:0 -24px}
+    .header-mobile-social .ico-li {background-position:-23px -24px}
+    .header-mobile-social .ico-twitter {background-position:-46px -24px}
+    
+    .prices span:first-child {font-size:22px !important}
+    .header-mobile-contacts-mobile-title {font-weight:bold; margin:20px 0 0 0}
 }
