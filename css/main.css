@@ -1578,6 +1578,21 @@ display: block;
 .header-mobile-contacts {display:none}
 .r-col-title-mobile {display:none}
 
+.up-link {display:block; opacity:0; visibility:hidden; position:fixed; z-index:90; right:20px; bottom:20px; width:40px; height:40px; border:1px solid #006351; background:#006351; box-shadow:2px 2px 10px rgba(0, 0, 0, 0.1); transition:opacity 0.2s, background-color 0.2s, border-color 0.2s}
+.up-link.visible {opacity:1; visibility:visible}
+@media screen and (min-width:1020px) {
+    .up-link:hover {background:#fff; border-color:#fff}
+}
+.up-link svg {display:block; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px; width:24px; height:24px; fill:none; stroke:#fff; transition:stroke 0.2s}
+@media screen and (min-width:1020px) {
+    .up-link:hover svg {stroke:#006351}
+}
+
+@media screen and (max-width:1019px) {
+    .up-link {width:50px; height:50px}
+    .up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
+}
+
 @media screen and (max-width:1019px) {
     body, html {min-width:0; height:auto}
 
@@ -1650,7 +1665,7 @@ display: block;
 
     .mainpage-events {min-width:0}
 
-    .mainpage-projects .projects-col {float:none; width:auto}
+    .mainpage-projects .projects-col {float:none; width:auto; line-height:24px}
     .mainpage-upcoming-events .events-table {width:auto; display:block}
     .mainpage-upcoming-events .events-table tbody {display:block}
     .mainpage-upcoming-events .events-table tr {display:block; padding:20px; border-top:1px solid #e5e5e5}
@@ -1661,7 +1676,7 @@ display: block;
     .mainpage-upcoming-events .events-table .form {width:auto; display:block; padding:10px 0 0 0; border:none}
     .mainpage-upcoming-events .events-table .price {width:auto; display:block; padding:10px 0 0 0; border:none}
     .mainpage-upcoming-events .events-table .price-content {width:auto}
-    .price-content .prices {padding-left:20px; padding-right:20px; text-align:center}
+    .price-content .prices {padding-left:20px; padding-right:20px; text-align:center; padding-top:18px}
     .mainpage-upcoming-events .events-table .price-1 {float:none; display:inline-block; vertical-align:top}
     .mainpage-upcoming-events .events-table .price-2 {float:none; display:inline-block; vertical-align:top}
     .price-content .signup, .price-content .signup:visited {margin-left:20px; margin-right:20px}
@@ -1671,8 +1686,8 @@ display: block;
     .calendar-carousel {width:auto}
     .calendar-monthes {width:auto; margin:0; text-align:center; left:0; right:0}
     .calendar-calendar {width:auto}
-    .calendar-month-prev {z-index:7}
-    .calendar-month-next {z-index:7}
+    .calendar-month-prev {z-index:7; left:10px}
+    .calendar-month-next {z-index:7; right:10px}
     .calendar-week-day {width:14.28%; box-sizing:border-box}
     .calendar-day {width:14.28%; box-sizing:border-box}
     .calendar-day-announce {right:20px}
@@ -1705,7 +1720,7 @@ display: block;
     .table-mobile tr {display:block}
     .table-mobile tr.first {display:none}
     .table-mobile tr td {display:block; padding-left:0; padding-right:0}
-    .td-mobile-title {display:block; font-weight:bold}
+    .td-mobile-title {display:block; font-weight:bold; font-size:18px; line-height:18px; color:#000}
 
     .mainpage-partners {padding-left:20px; padding-right:20px}
 
@@ -1775,12 +1790,17 @@ display: block;
     .teacher-related-events .seminars-table tr {display:block; padding:20px 0; border-top:1px solid #e5e5e5}
     .teacher-related-events .seminars-table tr:first-child {border-top:none}
     .teacher-related-events .seminars-table td {display:block; border-bottom:none; padding:0}
-    .teacher-related-events .seminars-table .name {width:auto}
+    .teacher-related-events .seminars-table .name {width:auto; font-size:20px; line-height:28px; font-weight:bold}
+    .teacher-related-events .seminars-table .ttl {font-size:20px; line-height:28px}
+    .teacher-related-events .seminars-table .course-date-big {font-size:16px; line-height:24px}
+    .teacher-related-events .seminars-table .course-date-big+div {padding:9px 0 0 0; font-size:16px; line-height:24px; font-weight:normal}
+    .teacher-related-events .seminars-table .course-date-big+div+div {padding:9px 0 0 0; font-size:16px; line-height:24px; font-weight:normal}
     .teacher-related-events .seminars-table .price {padding:20px 0 0 0}
     .teacher-related-events .seminars-table .price-content {width:auto; text-align:center}
     .teacher-related-events .seminars-table .prices {width:auto; text-align:center}
     .teacher-related-events .seminars-table .prices .price-1 {float:none; display:inline-block; vertical-align:top}
     .teacher-related-events .seminars-table .prices .price-2 {float:none; display:inline-block; vertical-align:top}
+    .teachers-list .teachers-list-item .name, .teachers-list-compact .teachers-list-item .name {margin:0 0 5px 0}
 
     .reviews-wide .course-reviews-item {width:auto}
     .reviews-wide .course-reviews-item .descr {width:auto}
@@ -1839,7 +1859,7 @@ display: block;
     .mainpage-events .next {right:-80px; background-position:-164px center}
     .events-carousel .descr {height:auto}
 
-    .block-news .news .title-n {width:auto}
+    .block-news .news .title-n {width:auto; line-height:24px}
 
     .calendar-byweek .calendar-week {display:none}
     .calendar-day-byweek {width:auto; float:none}
@@ -1994,4 +2014,62 @@ display: block;
     
     .prices span:first-child {font-size:22px !important}
     .header-mobile-contacts-mobile-title {font-weight:bold; margin:20px 0 0 0}
+    
+    .events-carousel .date {font-size:13px}
+    .files-list .file-type {font-size:13px}
+    .price-content .prices .cat {font-size:13px}
+    
+    .calendar-day {z-index:auto !important}
+    .calendar-day:hover, .calendar-day-viewed {z-index:100 !important}
+    .calendar-day-view {position:fixed; left:10px; top:100px; right:10px; bottom:10px; width:auto !important; height:auto; z-index:100; margin:0}
+    .calendar-carousel .jcarousel > li {z-index:auto !important}
+    .calendar {z-index:auto}
+    .calendar-day-view-top {float:left; margin:-3px -3px 0 -3px; width:100% !important; box-sizing:border-box; border-left:3px solid #006351; border-right:3px solid #006351 !important; bottom:auto !important; border-top:3px solid #006351 !important; border-bottom:none !important}
+    .calendar-day-view-middle {float:left; width:100% !important; box-sizing:border-box; border-bottom:3px solid #006351 !important; border-top:none !important}
+    .calendar-day-view-prices {float:none}
+    .calendar-day-view-prices::after {content:""; display:block; clear:both}
+    .calendar-day-view-btn {float:none}
+    .calendar-day-view-bottom {float:none; width:auto !important}
+    .calendar-day-view-middle-inner {width:100% !important; box-sizing:border-box}
+    .calendar-day-view-list-inner {width:auto !important}
+    .calendar-day-view-left .calendar-day-view-top {width:100% !important; border-right:3px solid #006351}
+    .calendar-day-view-left .calendar-day-view-middle {width:100% !important}
+    .calendar-day-view-list {max-height:calc(100vh - 150px)}
+    .presslist-preview-item .date {font-size:14px}
+    .calendar-day-view-top a::before {content:""; display:block; position:absolute; left:-10px; top:-10px; right:-10px; bottom:-10px}
+    .calendar-day-view-btm .calendar-day-view-top a {right:-14px; left:auto}
+    .presslist-preview {font-size:16px}
+    .pub-date {margin-top:-9px}
+    .article-lead {line-height:24px; margin-top:-10px}
+    .key-clients-content {margin:0}
+    .alphabet-filter .item {margin-right:10px; margin-bottom:10px}
+    .clients-list-item {font-size:16px; line-height:24px}
+    h3 .all-link {margin-top:0; line-height:28px}
+    .teacher-card .teacher-position {line-height:24px}
+    .teacher-card .teacher-data li {background-position:0 0.8em}
+    .center-descr {font-size:16px; line-height:24px}
+    .center-map-descr {font-size:16px; line-height:24px}
+    .course-manager .trigger img {width:30px; height:30px}
+    .course-docs .trigger span {font-size:20px}
+    .courses-content .l-col ol, .courses-content .l-col ul {margin-left:0}
+    .block-news .news .date-n {font-size:13px}
+    .mainpage-projects .common-list li {background-position: 0.07em}
+    .events-table-3-order-info .td-mobile-title {display:none}
+    .events-table-3-order .name {padding-top:0; margin-top:-10px}
+    .order-course-info-title {margin:5px 0 0 0; line-height:24px; font-size:16px}
+    .order-course-info-title:after {display:none}
+    .events-table-3-order .price {font-size:20px; line-height:24px; color:#e74225}
+    .events-table-3-order .price .td-mobile-title {margin-bottom:5px}
+    .order-course-info {font-size:16px; line-height:24px}
+    .events-table-3-order .order-course-info-option {font-size:16px; line-height:24px}
+    .common-form .form-text {height:45px}
+    .common-form .form-item {margin:0 0 8px 0}
+    .order-success {margin-top:-17px; padding-bottom:29px}
+    
+    .related-events {border-top:none}
+    .related-events h3 {background:#006351; padding:6px 20px; color:#fff; cursor:pointer; position:relative; margin:0 -20px !important; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
+    .related-events h3::after {content:""; display:block; width:24px; height:24px; position:absolute; right:6px; top:18px; background:url(../images/menu-arr.png) no-repeat}
+    .related-events.open h3::after {transform:rotate(-180deg); top:16px}
+    .page-course .courses-content .related-events .events-table-2 {display:none}
+    .page-course .courses-content .related-events.open .events-table-2 {display:block}
 }

@@ -1399,6 +1399,7 @@ $(document).ready(function() {
     $('.r-col').before('<div class="r-col-title-mobile"><a href="#">Дополнительная информация</a></div>');
 
     $('.mobile-menu-link').click(function(e) {
+        $('.calendar-day-viewed .calendar-day-view-top a').trigger('click');
         if ($('html').hasClass('mobile-menu-open')) {
             $('html').removeClass('mobile-menu-open');
             $('.wrapper').css('margin-top', 0);
@@ -1413,6 +1414,7 @@ $(document).ready(function() {
     });
 
     $('.mobile-search-link').click(function(e) {
+        $('.calendar-day-viewed .calendar-day-view-top a').trigger('click');
         if ($('html').hasClass('mobile-search-open')) {
             $('html').removeClass('mobile-search-open');
             $('.wrapper').css('margin-top', 0);
@@ -1459,14 +1461,45 @@ $(document).ready(function() {
     $('.footer h5').click(function() {
         $(this).parent().toggleClass('open');
     });
+    
+    $('body').append('<a href="#" class="up-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 15L12 9L6 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
 
+    $('.up-link').click(function(e) {
+        $('html, body').animate({'scrollTop': 0});
+        e.preventDefault();
+    });
+    
+    $('.tab-content').eq(0).addClass('open');
+    
+    $('.related-events h3').click(function() {
+        $(this).parent().toggleClass('open');
+    });
+    
 });
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
+
     if (windowScroll > 0) {
         $('.header').addClass('fixed');
     } else {
         $('.header').removeClass('fixed');
+    }
+
+    if ($('.up-link').length == 1) {
+        if (windowScroll > windowHeight) {
+            $('.up-link').addClass('visible');
+        } else {
+            $('.up-link').removeClass('visible');
+        }
+
+        if (windowScroll + windowHeight > $('.footer').offset().top) {
+            $('.up-link').css({'margin-bottom': (windowScroll + windowHeight) - $('.footer').offset().top});
+        } else {
+            $('.up-link').css({'margin-bottom': 0});
+        }
     }
 });
