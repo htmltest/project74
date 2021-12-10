@@ -1461,20 +1461,42 @@ $(document).ready(function() {
     $('.footer h5').click(function() {
         $(this).parent().toggleClass('open');
     });
-    
+
     $('body').append('<a href="#" class="up-link"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 15L12 9L6 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
 
     $('.up-link').click(function(e) {
         $('html, body').animate({'scrollTop': 0});
         e.preventDefault();
     });
-    
+
     $('.tab-content').eq(0).addClass('open');
-    
+
     $('.related-events h3').click(function() {
         $(this).parent().toggleClass('open');
     });
-    
+
+    $('body').on('click', '.calendar-day-active', function(e) {
+        windowOpenHTML('<div class="window-calendar-day">' + $(this).find('.calendar-day-view-middle-container').html() + '</div>');
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).hasClass('window')) {
+            windowClose();
+        }
+    });
+
+    $('body').on('click', '.window-close', function(e) {
+        windowClose();
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
@@ -1503,3 +1525,34 @@ $(window).on('load resize scroll', function() {
         }
     }
 });
+
+function windowOpenHTML(html) {
+    if ($('.window').length == 0) {
+        var curPadding = $('.top-wrap').width();
+        var curScroll = $(window).scrollTop();
+        $('html').addClass('window-open');
+        curPadding = $('.top-wrap').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+
+        $('body').append('<div class="window"></div>')
+
+        $('.top-wrap').css({'top': -curScroll});
+        $('.top-wrap').data('curScroll', curScroll);
+    }
+
+    if ($('.window-container').length == 0) {
+        $('.window').html('<div class="window-container">' + html + '<a href="#" class="window-close"></a></div>');
+    } else {
+        $('.window-container').html(html + '<a href="#" class="window-close"></a>');
+    }
+}
+
+function windowClose() {
+    if ($('.window').length > 0) {
+        $('.window').remove();
+        $('html').removeClass('window-open');
+        $('body').css({'margin-right': 0});
+        $('.top-wrap').css({'top': 0});
+        $(window).scrollTop($('.top-wrap').data('curScroll'));
+    }
+}

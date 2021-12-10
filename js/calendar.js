@@ -1,4 +1,4 @@
-﻿var apis = null;
+﻿/*var apis = null;
 
 (function($) {
 
@@ -64,4 +64,4 @@
 
     });
 
-})(jQuery);
+})(jQuery);*/

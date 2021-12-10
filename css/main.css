@@ -1382,7 +1382,7 @@ font-size: 120%;
 display: block;
 }
 
-/*
+
 .header .logo{
 	position: absolute;
 	top: -86px;
@@ -1397,7 +1397,7 @@ display: block;
 .header .header-phone{
 	margin: 31px 20px 0 336px;
 }
-*/
+
 
 .order-course-price span {font-size:14px; opacity:.5; font-weight:normal; text-decoration:line-through; margin:0 0 0 5px}
 .order-data-value-price span {font-size:14px; opacity:.5; font-weight:normal; text-decoration:line-through; margin:-2px 0 0 5px; vertical-align:middle}
@@ -1601,13 +1601,15 @@ display: block;
     .top-wrap {min-width:0; min-height:0}
     .top-main {padding:80px 0 0 0; overflow:visible}
 
-    .header {position:fixed; left:0; top:0; right:0; background:#fff; z-index:99; height:80px}
+    .header {position:fixed; left:0; top:0; right:0; background:#fff; z-index:99; height:80px; overflow:hidden}
     .header.fixed {box-shadow:0px 15px 10px rgba(0, 0, 0, 0.1)}
     .header-top {height:80px}
-    .header .logo {margin:14px 0 0 0}
-    .header .logo img {width:100px}
+    .header .logo {margin:-25px 0 0 -25px; position:relative; left:auto; top:auto; z-index:auto}
+    .header .logo img {width:150px}
+    .header-top .center-wrapper {height:80px}
 
     .mobile-menu-open .header {height:auto; bottom:0; overflow:auto}
+    .mobile-menu-open .header-top {overflow:hidden}
 
     .center-wrapper {width:auto}
 
@@ -1623,7 +1625,7 @@ display: block;
     .mobile-search-open .mobile-search-link svg:nth-child(1) {display:none}
     .mobile-search-open .mobile-search-link svg:nth-child(2) {display:block; fill:none; stroke:#006351; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
 
-    .mobile-search-open .header-search {display:block; width:auto; left:20px; bottom:-10px}
+    .mobile-search-open .header-search {display:block; width:auto; left:20px; bottom:-49px}
     .header-search .form-text {width:100%; background:none; height:44px; font-size:16px; line-height:24px; padding:8px 20px; border:2px solid #006351; box-sizing:border-box}
     .header-search .placeholder {font-size:16px; line-height:44px}
     .header-search .form-submit {width:26px; height:26px; right:5px; top:8px; background:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26"><path fill="none" stroke="rgba(0, 99, 81, 1)" d="M11.5227 19.7955C16.0916 19.7955 19.7955 16.0916 19.7955 11.5227C19.7955 6.95383 16.0916 3.25 11.5227 3.25C6.95383 3.25 3.25 6.95383 3.25 11.5227C3.25 16.0916 6.95383 19.7955 11.5227 19.7955Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="rgba(0, 99, 81, 1)" d="M22.7647 22.7647L18.0375 18.0375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>')}
@@ -1845,6 +1847,7 @@ display: block;
     .tab-content {display:block !important}
     .tab-content > * {display:none !important}
     .tab-content.open > * {display:block !important}
+    .tab-content.open > script {display:none !important}
     .tab-content-mobile-title {background:#006351; padding:6px 20px; color:#fff; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
     .tab-content .tab-content .tab-content-mobile-title {margin-left:20px}
     .tab-content-mobile-title::after {content:""; display:block; width:24px; height:24px; position:absolute; right:6px; top:18px; background:url(../images/menu-arr.png) no-repeat}
@@ -2011,6 +2014,10 @@ display: block;
     .header-mobile-social .ico-fb {background-position:0 -24px}
     .header-mobile-social .ico-li {background-position:-23px -24px}
     .header-mobile-social .ico-twitter {background-position:-46px -24px}
+    .header-mobile-social .ico-fb-2 { background-position: 0px -166px;}
+    .header-mobile-social .ico-im-2 { background-position: -48px -166px;}
+    .header-mobile-social .ico-tw-2 { background-position: -24px -166px;}
+    .header-mobile-social .ico-yt-2 { background-position: -72px -166px;}
     
     .prices span:first-child {font-size:22px !important}
     .header-mobile-contacts-mobile-title {font-weight:bold; margin:20px 0 0 0}
@@ -2038,11 +2045,15 @@ display: block;
     .presslist-preview-item .date {font-size:14px}
     .calendar-day-view-top a::before {content:""; display:block; position:absolute; left:-10px; top:-10px; right:-10px; bottom:-10px}
     .calendar-day-view-btm .calendar-day-view-top a {right:-14px; left:auto}
-    .presslist-preview {font-size:16px}
+    .presslist-preview {font-size:16px; line-height:24px}
+    .dl-links a {font-size:14px}
     .pub-date {margin-top:-9px}
-    .article-lead {line-height:24px; margin-top:-10px}
+    .page-title {margin:0}
+    .article-lead {line-height:24px; margin-top:0}
     .key-clients-content {margin:0}
-    .alphabet-filter .item {margin-right:10px; margin-bottom:10px}
+    .alphabet-filter .item {margin-right:0; margin-bottom:0; padding:0; margin:0 5px; float:none; display:inline-block; vertical-align:top; height:auto}
+    .alphabet-filter .item a {display:inline-block; padding:10px; vertical-align:top}
+    .alphabet-filter span.empty {display:inline-block; padding:10px; vertical-align:top}
     .clients-list-item {font-size:16px; line-height:24px}
     h3 .all-link {margin-top:0; line-height:28px}
     .teacher-card .teacher-position {line-height:24px}
@@ -2064,7 +2075,8 @@ display: block;
     .events-table-3-order .order-course-info-option {font-size:16px; line-height:24px}
     .common-form .form-text {height:45px}
     .common-form .form-item {margin:0 0 8px 0}
-    .order-success {margin-top:-17px; padding-bottom:29px}
+    .order-success {margin-top:0; padding-bottom:29px}
+    .order-success-text:last-child {padding-bottom:0}
     
     .related-events {border-top:none}
     .related-events h3 {background:#006351; padding:6px 20px; color:#fff; cursor:pointer; position:relative; margin:0 -20px !important; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
@@ -2072,4 +2084,34 @@ display: block;
     .related-events.open h3::after {transform:rotate(-180deg); top:16px}
     .page-course .courses-content .related-events .events-table-2 {display:none}
     .page-course .courses-content .related-events.open .events-table-2 {display:block}
+    
+    .courses-content .course-descr {background:none; padding:0}
+    .courses-content .course-date-big {font-size:16px; line-height:24px}
+    .courses-content .course-descr-l {font-size:16px; line-height:24px; padding-bottom:0}
+    .courses-content .course-descr-l > div {margin-top:10px}
+    .courses-content .course-descr .events-payments {margin-top:10px}
+    .courses-content .course-descr .price-content {background:#f4f7f5}
+    .courses-content .prices {padding-left:20px; padding-right:20px; text-align:center; padding-top:18px}
+    .courses-content .price-1 {float:none; display:inline-block; vertical-align:top}
+    .courses-content .price-2 {float:none; display:inline-block; vertical-align:top}
+    .courses-content .signup, .courses-content  .signup:visited {margin-left:20px; margin-right:20px}
+    .courses-content .distance-course-length {margin:0}
+}
+
+.window-open,
+.window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window-open .top-wrap {position:relative}
+
+.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:999; background:rgba(0, 0, 0, 0.6); text-align:center}
+.window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
+.window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; border:3px solid #006351; background:#fff; margin:30px 0}
+.window-close {display:block; position:absolute; right:-20px; top:-19px; width:36px; height:36px; background:url(../images/pup-close.png); background-size:100%}
+
+.window-calendar-day {width:400px; padding:20px; box-sizing:border-box}
+.window-calendar-day .calendar-day-view-list {max-height:none}
+.window-calendar-day .calendar-day-view-date {display:block; font-size:20px; line-height:24px; font-weight:bold; margin:0 0 20px 0}
+
+@media screen and (max-width:767px) {
+    .window-calendar-day {width:340px; max-width:calc(100vw - 40px); padding:10px}
 }
