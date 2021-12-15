@@ -1593,15 +1593,17 @@ display: block;
     .up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
 }
 
+.mobile-add-new {display:none}
+
 @media screen and (max-width:1019px) {
-    body, html {min-width:0; height:auto}
+    body, html {min-width:480px; height:auto}
 
     body {font-size:16px; line-height:24px}
 
     .top-wrap {min-width:0; min-height:0}
     .top-main {padding:80px 0 0 0; overflow:visible}
 
-    .header {position:fixed; left:0; top:0; right:0; background:#fff; z-index:99; height:80px; overflow:hidden}
+    .header {position:fixed; left:0; top:0; right:0; background:#fff; z-index:1001; height:80px; overflow:hidden}
     .header.fixed {box-shadow:0px 15px 10px rgba(0, 0, 0, 0.1)}
     .header-top {height:80px}
     .header .logo {margin:-25px 0 0 -25px; position:relative; left:auto; top:auto; z-index:auto}
@@ -1646,11 +1648,11 @@ display: block;
     .mobile-menu-open .main-menu {display:block}
     .main-menu ul {margin-left:0; border-top:1px solid #dcdcdc}
     .main-menu ul li {float:none; margin:0; background:none !important; border-bottom:1px solid #dcdcdc}
-    .main-menu ul li .link {display:block}
-    .main-menu ul li a {display:block; padding-left:0; float:none; color:#006351 !important; background:none !important; padding:20px 0; font-size:18px; line-height:27px}
-    .main-menu ul li span.arr {width:19px; height:20px; top:33px; margin:-10px 0 0 0; background:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 24"><path d="M22.0607 13.0607C22.6464 12.4749 22.6464 11.5251 22.0607 10.9393L12.5147 1.3934C11.9289 0.807609 10.9792 0.80761 10.3934 1.3934C9.80761 1.97918 9.80761 2.92893 10.3934 3.51472L18.8787 12L10.3934 20.4853C9.80761 21.0711 9.80761 22.0208 10.3934 22.6066C10.9792 23.1924 11.9289 23.1924 12.5147 22.6066L22.0607 13.0607ZM2.62268e-07 13.5L21 13.5L21 10.5L-2.62268e-07 10.5L2.62268e-07 13.5Z" fill="rgba(185, 185, 185, 1)"/></svg>'); background-size:100% 100%}
+    .main-menu ul li .link {display:block; position:relative}
+    .main-menu ul li a {display:block; padding-left:0; float:none; color:#006351 !important; background:none !important; padding:20px 0; font-size:18px; line-height:27px; position:relative}
+    .main-menu ul li span.arr {width:59px; height:100%; top:0; margin:0; right:-20px; background:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 24"><path d="M22.0607 13.0607C22.6464 12.4749 22.6464 11.5251 22.0607 10.9393L12.5147 1.3934C11.9289 0.807609 10.9792 0.80761 10.3934 1.3934C9.80761 1.97918 9.80761 2.92893 10.3934 3.51472L18.8787 12L10.3934 20.4853C9.80761 21.0711 9.80761 22.0208 10.3934 22.6066C10.9792 23.1924 11.9289 23.1924 12.5147 22.6066L22.0607 13.0607ZM2.62268e-07 13.5L21 13.5L21 10.5L-2.62268e-07 10.5L2.62268e-07 13.5Z" fill="rgba(185, 185, 185, 1)"/></svg>'); background-size:19px 20px; background-position:center; background-repeat:no-repeat}
     .main-menu ul li span.arr img {display:none}
-    .main-menu ul li.open span.arr {right:auto; left:0; transform:rotate(-180deg)}
+    .main-menu ul li.open span.arr {right:auto; left:0; width:20px; transform:rotate(-180deg)}
     .main-menu ul li.open .link a {padding-left:40px}
     .main-menu .submenu {position:relative; left:auto; top:auto; margin:0; min-width:0; background:none}
     .main-menu ul li.open .submenu a {padding-left:0; font-weight:normal}
@@ -1721,7 +1723,8 @@ display: block;
     .table-mobile {width:auto}
     .table-mobile tr {display:block}
     .table-mobile tr.first {display:none}
-    .table-mobile tr td {display:block; padding-left:0; padding-right:0}
+    .table-mobile tr td {display:block; padding-left:0; padding-right:0; width:auto !important}
+    .table-mobile tr td img {float:none !important; width:auto !important; height:auto !important; max-width:100%; margin:0 !important}
     .td-mobile-title {display:block; font-weight:bold; font-size:18px; line-height:18px; color:#000}
 
     .mainpage-partners {padding-left:20px; padding-right:20px}
@@ -1818,7 +1821,6 @@ display: block;
     .l-col {float:none; width:auto; margin:0; padding:0}
     .r-col {display:none; float:none; width:auto; margin:20px 0; padding:0 !important}
     .r-col.visible {display:block}
-    .page-tools {display:none}
     .courses-content .courses-descr {width:auto}
     .courses-content .l-col ol, .courses-content .l-col ul {margin-left:0}
     .course-manager .manager-popup {left:0}
@@ -2003,7 +2005,7 @@ display: block;
     .courses-tabs .page-text {font-family:"PT Sans", sans-serif}
     .page-text {font-size:16px; line-height:24px}
     .page-text ul li {background-position:left 0.4em}
-    .courses-content .l-col ul > li {background-position:left 0.4em}
+    .courses-content .l-col ul > li {background-position:left 0.5em}
     .center-wrapper {padding:0 20px}
 
     .tab-content.open {margin-bottom:40px; padding-bottom:0}
@@ -2053,6 +2055,8 @@ display: block;
     .key-clients-content {margin:0}
     .alphabet-filter .item {margin-right:0; margin-bottom:0; padding:0; margin:0 5px; float:none; display:inline-block; vertical-align:top; height:auto}
     .alphabet-filter .item a {display:inline-block; padding:10px; vertical-align:top}
+    .alphabet-filter .item.act {padding:10px}
+    .alphabet-filter .item.act a {padding:0}
     .alphabet-filter span.empty {display:inline-block; padding:10px; vertical-align:top}
     .clients-list-item {font-size:16px; line-height:24px}
     h3 .all-link {margin-top:0; line-height:28px}
@@ -2096,6 +2100,23 @@ display: block;
     .courses-content .price-2 {float:none; display:inline-block; vertical-align:top}
     .courses-content .signup, .courses-content  .signup:visited {margin-left:20px; margin-right:20px}
     .courses-content .distance-course-length {margin:0}
+    
+    #finevision_banner {display:none !important}
+    .courses-content {margin:30px 0 0 0}
+    div[rel="course-brief"] table {display:block; width:auto !important}
+    div[rel="course-brief"] table tbody {display:block}
+    div[rel="course-brief"] table tr {display:block; margin:20px 0}
+    div[rel="course-brief"] table td {display:block; width:auto !important}
+    div[rel="course-brief"] table td p {margin:0}
+    
+    .course-docs .cont span {font-size:13px; line-height:18px}
+    .course-docs .cont a {font-size:14px}
+    .hidden-mobile-add {display:none !important}
+    .mobile-add-new {display:block; padding:0 20px}
+    
+    .personal-form.long-form label {width:auto; float:none}
+    .pt-links {display:none}
+    .page-courses .courses-content .events-table-2 {width:auto}
 }
 
 .window-open,
@@ -2103,7 +2124,7 @@ display: block;
 
 .window-open .top-wrap {position:relative}
 
-.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:999; background:rgba(0, 0, 0, 0.6); text-align:center}
+.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:9999; background:rgba(0, 0, 0, 0.6); text-align:center}
 .window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
 .window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; border:3px solid #006351; background:#fff; margin:30px 0}
 .window-close {display:block; position:absolute; right:-20px; top:-19px; width:36px; height:36px; background:url(../images/pup-close.png); background-size:100%}

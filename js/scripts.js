@@ -1396,7 +1396,15 @@ $(document).ready(function() {
 
     $('.header-top .center-wrapper').prepend('<a href="#" class="mobile-menu-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34" id="mobile-menu-link"><path d="M4.25 18.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 8.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 28.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
     $('.header-top .center-wrapper').append('<a href="#" class="mobile-search-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26"><path d="M11.5227 19.7955C16.0916 19.7955 19.7955 16.0916 19.7955 11.5227C19.7955 6.95383 16.0916 3.25 11.5227 3.25C6.95383 3.25 3.25 6.95383 3.25 11.5227C3.25 16.0916 6.95383 19.7955 11.5227 19.7955Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.7647 22.7647L18.0375 18.0375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23" id="mobile-menu-close"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
-    $('.r-col').before('<div class="r-col-title-mobile"><a href="#">Дополнительная информация</a></div>');
+    if ($('.r-col').length == 1 && $('.mainpage-upcoming-events').length == 1 && $('.mainpage-upcoming-events').parents().filter('.courses-content').length == 0) {
+        var cloneRCol = $('.r-col').clone(true);
+        $('.r-col').addClass('hidden-mobile-add');
+        $('.mainpage-upcoming-events').after('<div class="mobile-add-new"></div>');
+        $('.mobile-add-new').append('<div class="r-col-title-mobile"><a href="#">Дополнительная информация</a></div>');
+        $('.mobile-add-new').append(cloneRCol);
+    } else {
+        $('.r-col').before('<div class="r-col-title-mobile"><a href="#">Дополнительная информация</a></div>');
+    }
 
     $('.mobile-menu-link').click(function(e) {
         $('.calendar-day-viewed .calendar-day-view-top a').trigger('click');
