@@ -1644,7 +1644,7 @@ display: block;
     .header-mobile-contacts .city-trigger {font-weight:normal; background:none; color:#000}
     .header-mobile-contacts .contacts-address strong {font-weight:normal; background:none; color:#000}
 
-    .main-menu {display:none; background:none}
+    .main-menu {display:none; background:none; min-height:calc(100vh - 395px)}
     .mobile-menu-open .main-menu {display:block}
     .main-menu ul {margin-left:0; border-top:1px solid #dcdcdc}
     .main-menu ul li {float:none; margin:0; background:none !important; border-bottom:1px solid #dcdcdc}
@@ -2011,8 +2011,8 @@ display: block;
     .tab-content.open {margin-bottom:40px; padding-bottom:0}
 
     .header-mobile-social {text-align:left; font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 30px 0}
-    .header-mobile-social a {display:inline-block; vertical-align:top; margin:0 20px 0 0}
-    .header-mobile-social .ico {width:23px; height:23px; display:block; transform:scale(1.25); transform-origin:left top}
+    .header-mobile-social a {display:inline-block; vertical-align:top; margin:0 30px 0 0}
+    .header-mobile-social .ico {width:24px; height:24px; display:block; transform:scale(1.25); transform-origin:left top}
     .header-mobile-social .ico-fb {background-position:0 -24px}
     .header-mobile-social .ico-li {background-position:-23px -24px}
     .header-mobile-social .ico-twitter {background-position:-46px -24px}
@@ -2125,6 +2125,8 @@ display: block;
     .main-page .mainpage-upcoming-events {order:2; margin-top:20px; width:100%}
     .main-page .mainpage-calendar {order:4; width:100%}
     .main-page .mainpage-partners {order:5; width:100%}
+    
+    .page-courses .courses-content .events-table-2 .name, .page-course .courses-content .events-table-2 .name {width:auto}
 }
 
 .window-open,
