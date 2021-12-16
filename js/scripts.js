@@ -1477,7 +1477,9 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.tab-content').eq(0).addClass('open');
+    if ($('.main-page').length == 0) {
+        $('.tab-content').eq(0).addClass('open');
+    }
 
     $('.related-events h3').click(function() {
         $(this).parent().toggleClass('open');
