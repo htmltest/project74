@@ -1821,6 +1821,7 @@ display: block;
     .l-col {float:none; width:auto; margin:0; padding:0}
     .r-col {display:none; float:none; width:auto; margin:20px 0; padding:0 !important}
     .r-col.visible {display:block}
+    .mobile-add-new .r-col {padding:0 20px !important}
     .courses-content .courses-descr {width:auto}
     .courses-content .l-col ol, .courses-content .l-col ul {margin-left:0}
     .course-manager .manager-popup {left:0}
@@ -1847,10 +1848,9 @@ display: block;
 
     .tabs {display:none}
     .tab-content {display:block !important}
-    .tab-content > * {display:none !important}
-    .tab-content.open > * {display:block !important}
-    .tab-content.open > script {display:none !important}
-    .tab-content-mobile-title {background:#d1f8c9; padding:6px 20px; color:#000; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
+    .tab-content-mobile-content {display:none !important}
+    .tab-content.open > .tab-content-mobile-content {display:block !important}
+    .tab-content-mobile-title {background:#d1f8c9; padding:6px 20px; color:#000; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px; font-family:"Arial", sans-serif}
     .tab-content .tab-content .tab-content-mobile-title {margin-left:20px}
     .tab-content-mobile-title::after {content:""; display:block; width:32px; height:32px; position:absolute; right:20px; top:14px; background:url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="rgb(0, 99, 81)" xmlns="http://www.w3.org/2000/svg"><path d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,28A13,13,0,1,0,3,16,13,13,0,0,0,16,29Z"/><path d="M10.41,12.13,16,17.71l5.59-5.58a1,1,0,0,1,1.41,0h0a1,1,0,0,1,0,1.41L16.64,19.9a.91.91,0,0,1-1.28,0L9,13.54a1,1,0,0,1,0-1.41H9A1,1,0,0,1,10.41,12.13Z"/></svg>')}
     .tab-content.open > .tab-content-mobile-title::after {transform:rotate(-180deg); top:14px}
@@ -1977,6 +1977,7 @@ display: block;
 
     .r-col-title-mobile {display:block; font-weight:bold; margin:20px 0; font-size:20px; line-height:30px}
     .r-col-title-mobile a {text-decoration:none; display:block; background:#d1f8c9; padding:6px 20px; color:#000; cursor:pointer; position:relative; margin:0 -20px; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
+    .mobile-add-new .r-col-title-mobile a {margin:0}
     .r-col-title-mobile a::after {content:""; display:block; width:32px; height:32px; position:absolute; right:20px; top:14px; background:url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="rgb(0, 99, 81)" xmlns="http://www.w3.org/2000/svg"><path d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,28A13,13,0,1,0,3,16,13,13,0,0,0,16,29Z"/><path d="M10.41,12.13,16,17.71l5.59-5.58a1,1,0,0,1,1.41,0h0a1,1,0,0,1,0,1.41L16.64,19.9a.91.91,0,0,1-1.28,0L9,13.54a1,1,0,0,1,0-1.41H9A1,1,0,0,1,10.41,12.13Z"/></svg>')}
     .r-col-title-mobile.open a::after {transform:rotate(-180deg); top:14px}
 
@@ -2003,8 +2004,8 @@ display: block;
     .mainpage-upcoming-events .events-table .form {font-size:16px}
     .events-payments {font-size:16px; line-height:24px}
     .courses-tabs .page-text {font-family:"PT Sans", sans-serif}
-    .page-text {font-size:16px; line-height:24px}
-    .page-text ul li {background-position:left 0.4em}
+    .page-text {font-size:16px; line-height:24px; margin:30px 0 0 0}
+    .page-text ul li {background-position:left 0.5em}
     .courses-content .l-col ul > li {background-position:left 0.5em}
     .center-wrapper {padding:0 20px}
 
@@ -2112,7 +2113,7 @@ display: block;
     .course-docs .cont span {font-size:13px; line-height:18px}
     .course-docs .cont a {font-size:14px}
     .hidden-mobile-add {display:none !important}
-    .mobile-add-new {display:block; padding:0 20px}
+    .mobile-add-new {display:block}
     
     .personal-form.long-form label {width:auto; float:none}
     .pt-links {display:none}
@@ -2127,6 +2128,20 @@ display: block;
     .main-page .mainpage-partners {order:5; width:100%}
     
     .page-courses .courses-content .events-table-2 .name, .page-course .courses-content .events-table-2 .name {width:auto}
+    
+    .page-courses .single-col .content {display:flex; flex-flow:wrap}
+    .page-courses .single-col .content > .page-title {order:0; width:100%}
+    .page-courses .single-col .content > .center-wrapper {order:2; width:100%}
+    .page-courses .single-col .content > .mainpage-upcoming-events {order:1; width:100%}
+    .page-courses .single-col .content > .mobile-add-new {order:3; width:100%}
+    .page-courses .single-col .content > .mainpage-calendar {order:4; width:100%}
+    .page-courses .single-col .content > .mainpage-partners {order:5; width:100%}
+    .dl-program span {font-size:14px; line-height:18px}
+    
+    .presslist-preview-item h4 {line-height:24px}
+    
+    .common-form .g-recaptcha {float:none}
+    label:empty {display:none}
 }
 
 .window-open,

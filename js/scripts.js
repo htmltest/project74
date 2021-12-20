@@ -1447,6 +1447,7 @@ $(document).ready(function() {
         curTabbed.find('> .tabs-content > .tab-content').each(function() {
             var curTabContent = $(this);
             var curIndex = curTabbed.find('> .tabs-content > .tab-content').index(curTabContent);
+            curTabContent.wrapInner('<div class="tab-content-mobile-content"></div>');
             curTabContent.prepend('<div class="tab-content-mobile-title">' + curTabbed.find('> .tabs > .tab').eq(curIndex).html().replace('<br>', ' ') + '</div>');
         });
     });
@@ -1477,7 +1478,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    if ($('.main-page').length == 0) {
+    if ($('.main-page').length == 0 && $('.page-courses').length == 0) {
         $('.tab-content').eq(0).addClass('open');
     }
 
