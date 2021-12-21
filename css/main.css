@@ -2021,14 +2021,14 @@ display: block;
     .header-mobile-social .ico-im-2 { background-position: -48px -166px;}
     .header-mobile-social .ico-tw-2 { background-position: -24px -166px;}
     .header-mobile-social .ico-yt-2 { background-position: -72px -166px;}
-    
+
     .prices span:first-child {font-size:22px !important}
     .header-mobile-contacts-mobile-title {font-weight:bold; margin:20px 0 0 0}
-    
+
     .events-carousel .date {font-size:13px}
     .files-list .file-type {font-size:13px}
     .price-content .prices .cat {font-size:13px}
-    
+
     .calendar-day {z-index:auto !important}
     .calendar-day:hover, .calendar-day-viewed {z-index:100 !important}
     .calendar-day-view {position:fixed; left:10px; top:100px; right:10px; bottom:10px; width:auto !important; height:auto; z-index:100; margin:0}
@@ -2082,7 +2082,7 @@ display: block;
     .common-form .form-item {margin:0 0 8px 0}
     .order-success {margin-top:0; padding-bottom:29px}
     .order-success-text:last-child {padding-bottom:0}
-    
+
     .related-events {border-top:none}
     .related-events h3 {background:#d1f8c9; padding:6px 20px; color:#000; cursor:pointer; position:relative; margin:0 -20px !important; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
     .related-events h3::after {content:""; display:block; width:32px; height:32px; position:absolute; right:20px; top:14px; background:url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="rgb(0, 99, 81)" xmlns="http://www.w3.org/2000/svg"><path d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,28A13,13,0,1,0,3,16,13,13,0,0,0,16,29Z"/><path d="M10.41,12.13,16,17.71l5.59-5.58a1,1,0,0,1,1.41,0h0a1,1,0,0,1,0,1.41L16.64,19.9a.91.91,0,0,1-1.28,0L9,13.54a1,1,0,0,1,0-1.41H9A1,1,0,0,1,10.41,12.13Z"/></svg>')}
@@ -2101,7 +2101,7 @@ display: block;
     .courses-content .price-2 {float:none; display:inline-block; vertical-align:top}
     .courses-content .signup, .courses-content  .signup:visited {margin-left:20px; margin-right:20px}
     .courses-content .distance-course-length {margin:0}
-    
+
     #finevision_banner {display:none !important}
     .courses-content {margin:30px 0 0 0}
     div[rel="course-brief"] table {display:block; width:auto !important}
@@ -2109,16 +2109,16 @@ display: block;
     div[rel="course-brief"] table tr {display:block; margin:20px 0}
     div[rel="course-brief"] table td {display:block; width:auto !important}
     div[rel="course-brief"] table td p {margin:0}
-    
+
     .course-docs .cont span {font-size:13px; line-height:18px}
     .course-docs .cont a {font-size:14px}
     .hidden-mobile-add {display:none !important}
     .mobile-add-new {display:block}
-    
+
     .personal-form.long-form label {width:auto; float:none}
     .pt-links {display:none}
     .page-courses .courses-content .events-table-2 {width:auto}
-    
+
     .main-page .content {display:flex; flex-flow:wrap}
     .main-page .mainpage-events {order:0; width:100%}
     .main-page .mainpage-education {order:1; width:100%}
@@ -2126,9 +2126,9 @@ display: block;
     .main-page .mainpage-upcoming-events {order:2; margin-top:20px; width:100%}
     .main-page .mainpage-calendar {order:4; width:100%}
     .main-page .mainpage-partners {order:5; width:100%}
-    
+
     .page-courses .courses-content .events-table-2 .name, .page-course .courses-content .events-table-2 .name {width:auto}
-    
+
     .page-courses .single-col .content {display:flex; flex-flow:wrap}
     .page-courses .single-col .content > .page-title {order:0; width:100%}
     .page-courses .single-col .content > .center-wrapper {order:2; width:100%}
@@ -2137,11 +2137,26 @@ display: block;
     .page-courses .single-col .content > .mainpage-calendar {order:4; width:100%}
     .page-courses .single-col .content > .mainpage-partners {order:5; width:100%}
     .dl-program span {font-size:14px; line-height:18px}
-    
+    .dl-program a {font-size:16px}
+
     .presslist-preview-item h4 {line-height:24px}
-    
+
     .common-form .g-recaptcha {float:none}
     label:empty {display:none}
+
+    .page-courses .single-col .content > .center-wrapper {display:flex; flex-flow:wrap}
+    .page-courses .single-col .content > .center-wrapper > .courses-content {order:1; width:100%}
+    .page-courses .single-col .content > .center-wrapper > .mainpage-upcoming-events {order:0; width:100%}
+    .page-courses .single-col .content > .center-wrapper > .mobile-add-new {order:2; width:100%}
+
+    .page-course .single-col .content > .center-wrapper {display:flex; flex-flow:wrap}
+    .page-course .single-col .content > .center-wrapper > .courses-content {order:1; width:100%}
+    .page-course .single-col .content > .center-wrapper > .mainpage-upcoming-events {order:0; width:100%}
+    .page-course .single-col .content > .center-wrapper > .mobile-add-new {order:2; width:100%}
+
+     .page-courses .courses-content .events-table-2 .name, .page-course .courses-content .events-table-2 .name {font-size:20px; line-height:28px}
+     .page-courses .courses-content .events-table-2 .name a, .page-course .courses-content .events-table-2 .name a {font-size:20px !important; line-height:28px !important}
+     .events-table-2 .check-in, .events-table-2 .cat {font-size:16px; line-height:24px}
 }
 
 .window-open,
