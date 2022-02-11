@@ -2054,6 +2054,7 @@ display: block;
     .page-title {margin:0}
     .article-lead {line-height:24px; margin-top:0}
     .key-clients-content {margin:0}
+    .alphabet-filter {margin:20px 0 12px 0}
     .alphabet-filter .item {margin-right:0; margin-bottom:0; padding:0; margin:0 5px; float:none; display:inline-block; vertical-align:top; height:auto}
     .alphabet-filter .item a {display:inline-block; padding:10px; vertical-align:top}
     .alphabet-filter .item.act {padding:10px}
@@ -2087,8 +2088,10 @@ display: block;
     .related-events h3 {background:#d1f8c9; padding:6px 20px; color:#000; cursor:pointer; position:relative; margin:0 -20px !important; padding:14px 40px 14px 20px; font-weight:bold; font-size:20px; line-height:30px}
     .related-events h3::after {content:""; display:block; width:32px; height:32px; position:absolute; right:20px; top:14px; background:url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="rgb(0, 99, 81)" xmlns="http://www.w3.org/2000/svg"><path d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,28A13,13,0,1,0,3,16,13,13,0,0,0,16,29Z"/><path d="M10.41,12.13,16,17.71l5.59-5.58a1,1,0,0,1,1.41,0h0a1,1,0,0,1,0,1.41L16.64,19.9a.91.91,0,0,1-1.28,0L9,13.54a1,1,0,0,1,0-1.41H9A1,1,0,0,1,10.41,12.13Z"/></svg>')}
     .related-events.open h3::after {transform:rotate(-180deg); top:14px}
-    .page-course .courses-content .related-events .events-table-2 {display:none}
-    .page-course .courses-content .related-events.open .events-table-2 {display:block}
+    .related-events .events-table-2 {display:none}
+    .related-events.open .events-table-2 {display:block}
+    .events-table .name a {line-height:28px !important; font-size:20px !important}
+    .events-table-2 .check-in, .events-table-2 .cat {font-size:16px; line-height:24px}
 
     .courses-content .course-descr {background:none; padding:0}
     .courses-content .course-date-big {font-size:16px; line-height:24px}
